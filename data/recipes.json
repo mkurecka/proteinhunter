@@ -1,0 +1,338 @@
+{
+  "recipes": [
+    {
+      "id": "r-1",
+      "title": "Proteinové palačinky s tvarohem",
+      "slug": "proteinove-palacinky-s-tvarohem",
+      "description": "Rychlé a zdravé palačinky s vysokým obsahem bílkovin - ideální snídaně pro sportovce",
+      "category": "breakfast",
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "totalTime": 25,
+      "servings": 4,
+      "protein": 28.5,
+      "calories": 320,
+      "mainIngredient": "tvaroh-polotucny-pilos",
+      "ingredients": [
+        {"name": "Tvaroh polotučný", "amount": 200, "unit": "g", "protein": 25.0},
+        {"name": "Vejce", "amount": 2, "unit": "ks", "protein": 13.8},
+        {"name": "Ovesné vločky", "amount": 40, "unit": "g", "protein": 5.2},
+        {"name": "Mléko", "amount": 100, "unit": "ml", "protein": 3.3},
+        {"name": "Banán", "amount": 1, "unit": "ks", "protein": 1.1},
+        {"name": "Kokosový olej", "amount": 1, "unit": "lžíce", "protein": 0}
+      ],
+      "instructions": [
+        "Rozmixujte tvaroh, vejce, ovesné vločky, mléko a banán na hladké těsto",
+        "Nechte těsto 5 minut odpočinout, aby vločky nabobtly", 
+        "Rozehřejte pánev s kokosovým olejem",
+        "Nalijte porci těsta a smažte 2-3 minuty z každé strany",
+        "Podávejte teplé s ovocem nebo ořechy"
+      ],
+      "tags": ["vysoký protein", "snídaně", "fitness", "zdravé", "rychlé"],
+      "nutritionPer100g": {
+        "calories": 128,
+        "protein": 11.4,
+        "carbs": 12.8,
+        "fat": 3.2,
+        "fiber": 1.8
+      },
+      "relatedProducts": ["tvaroh-polotucny-pilos", "ovesne-vlocky-jemne", "vejce-m"],
+      "seoKeywords": ["proteinové palačinky", "palačinky s tvarohem", "fitness snídaně", "recepty s vysokým proteinem"],
+      "searchVolume": 2400
+    },
+    {
+      "id": "r-2", 
+      "title": "Kuřecí prsa na grilu s quinoou",
+      "slug": "kureci-prsa-na-grilu-s-quinoou",
+      "description": "Kompletní proteinové jídlo s kuřecím masem a quinoou - ideální po tréninku",
+      "category": "dinner",
+      "difficulty": "medium", 
+      "prepTime": 15,
+      "cookTime": 25,
+      "totalTime": 40,
+      "servings": 2,
+      "protein": 45.2,
+      "calories": 420,
+      "mainIngredient": "kureci-prsa",
+      "ingredients": [
+        {"name": "Kuřecí prsa", "amount": 300, "unit": "g", "protein": 69.0},
+        {"name": "Quinoa", "amount": 80, "unit": "g", "protein": 11.2},
+        {"name": "Brokolice", "amount": 200, "unit": "g", "protein": 6.0},
+        {"name": "Olivový olej", "amount": 2, "unit": "lžíce", "protein": 0},
+        {"name": "Česnek", "amount": 2, "unit": "stroužky", "protein": 0.4},
+        {"name": "Citron", "amount": 0.5, "unit": "ks", "protein": 0.2}
+      ],
+      "instructions": [
+        "Marinujte kuřecí prsa v olivovém oleji, česneku a citronu 15 minut",
+        "Uvařte quinou podle návodu na obalu (15 minut)",
+        "Ugrilujte kuřecí prsa 6-8 minut z každé strany",
+        "Uvařte brokolici na páře 5 minut",
+        "Podávejte kuře s quinoou a brokolici, pokapejte citronem"
+      ],
+      "tags": ["vysoký protein", "oběd", "večeře", "grilování", "fitness", "zdravé"],
+      "nutritionPer100g": {
+        "calories": 175,
+        "protein": 18.8,
+        "carbs": 8.4,
+        "fat": 6.2,
+        "fiber": 2.1
+      },
+      "relatedProducts": ["kureci-prsa", "quinoa"],
+      "seoKeywords": ["kuřecí prsa gril", "quinoa recept", "proteinové jídlo", "fitness oběd"],
+      "searchVolume": 1800
+    },
+    {
+      "id": "r-3",
+      "title": "Proteinový smoothie s whey proteinem",
+      "slug": "proteinovy-smoothie-s-whey-proteinem", 
+      "description": "Výživný proteinový nápoj ideální po tréninku - 35g proteinu na porci",
+      "category": "beverages",
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 0,
+      "totalTime": 5,
+      "servings": 1,
+      "protein": 35.4,
+      "calories": 280,
+      "mainIngredient": "whey-protein-myprotein",
+      "ingredients": [
+        {"name": "Whey protein vanilka", "amount": 30, "unit": "g", "protein": 24.6},
+        {"name": "Banán", "amount": 1, "unit": "ks", "protein": 1.1},
+        {"name": "Ovesné vločky", "amount": 20, "unit": "g", "protein": 2.6},
+        {"name": "Řecký jogurt", "amount": 100, "unit": "g", "protein": 10.0},
+        {"name": "Mléko", "amount": 200, "unit": "ml", "protein": 6.6},
+        {"name": "Ořechy", "amount": 10, "unit": "g", "protein": 2.1}
+      ],
+      "instructions": [
+        "Všechny ingredience vložte do mixéru",
+        "Mixujte 30-60 sekund až do hladka",
+        "Přidejte led podle chuti",
+        "Podávejte ihned po přípravě"
+      ],
+      "tags": ["whey protein", "smoothie", "po tréninku", "rychlé", "nápoj"],
+      "nutritionPer100g": {
+        "calories": 93,
+        "protein": 11.8,
+        "carbs": 8.2,
+        "fat": 2.1,
+        "fiber": 1.4
+      },
+      "relatedProducts": ["whey-protein-myprotein", "recky-jogurt-0-milko"],
+      "seoKeywords": ["proteinový smoothie", "whey protein smoothie", "nápoj po tréninku"],
+      "searchVolume": 3200
+    },
+    {
+      "id": "r-4",
+      "title": "Čočkový guláš s vysokým proteinem",
+      "slug": "cockovy-gulas-s-vysokym-proteinem",
+      "description": "Vegetariánský guláš z červené čočky - 22g proteinu na porci",
+      "category": "dinner",
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "totalTime": 55,
+      "servings": 4,
+      "protein": 22.3,
+      "calories": 340,
+      "mainIngredient": "cervena-cocka",
+      "ingredients": [
+        {"name": "Červená čočka", "amount": 200, "unit": "g", "protein": 50.0},
+        {"name": "Cibule", "amount": 2, "unit": "ks", "protein": 2.2},
+        {"name": "Paprika", "amount": 2, "unit": "ks", "protein": 2.0},
+        {"name": "rajčata", "amount": 400, "unit": "g", "protein": 3.6},
+        {"name": "Česnek", "amount": 3, "unit": "stroužky", "protein": 0.6},
+        {"name": "Olivový olej", "amount": 3, "unit": "lžíce", "protein": 0}
+      ],
+      "instructions": [
+        "Opražte nakrájenou cibuli a česnek na olivovém oleji",
+        "Přidejte nakrájenou papriku a restujte 5 minut",
+        "Vsypte čočku a zalijte vodou (1:3)",
+        "Přidejte rajčata a koření, vařte 25 minut",
+        "Dochutťte solí a pepřem"
+      ],
+      "tags": ["vegetariánské", "luštěniny", "vysoký protein", "zdravé", "oběd"],
+      "nutritionPer100g": {
+        "calories": 113,
+        "protein": 7.4,
+        "carbs": 15.8,
+        "fat": 2.1,
+        "fiber": 4.2
+      },
+      "relatedProducts": ["cervena-cocka"],
+      "seoKeywords": ["čočkový guláš", "vegetariánský guláš", "recepty s čočkou", "luštěniny recepty"],
+      "searchVolume": 1600
+    },
+    {
+      "id": "r-5",
+      "title": "Proteinové muffiny s tvarohem",
+      "slug": "proteinove-muffiny-s-tvarohem",
+      "description": "Zdravé proteinové muffiny - perfektní svačina s 8g proteinu na kus",
+      "category": "snacks", 
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "totalTime": 40,
+      "servings": 12,
+      "protein": 8.2,
+      "calories": 140,
+      "mainIngredient": "tvaroh-polotucny-pilos",
+      "ingredients": [
+        {"name": "Tvaroh", "amount": 250, "unit": "g", "protein": 31.25},
+        {"name": "Ovesná mouka", "amount": 150, "unit": "g", "protein": 19.5},
+        {"name": "Vejce", "amount": 2, "unit": "ks", "protein": 13.8},
+        {"name": "Med", "amount": 60, "unit": "g", "protein": 0.6},
+        {"name": "Borůvky", "amount": 100, "unit": "g", "protein": 0.7},
+        {"name": "Prášek do pečiva", "amount": 10, "unit": "g", "protein": 0}
+      ],
+      "instructions": [
+        "Smíchejte tvaroh, vejce a med",
+        "Přidejte ovesnou mouku a prášek do pečiva",
+        "Vmíchejte borůvky",
+        "Rozdělte do formiček na muffiny",
+        "Pečte 25 minut na 180°C"
+      ],
+      "tags": ["muffiny", "tvaroh", "zdravé pečivo", "svačina", "fitness"],
+      "nutritionPer100g": {
+        "calories": 167,
+        "protein": 9.8,
+        "carbs": 18.2,
+        "fat": 5.1,
+        "fiber": 2.8
+      },
+      "relatedProducts": ["tvaroh-polotucny-pilos", "ovesne-vlocky-jemne"],
+      "seoKeywords": ["proteinové muffiny", "muffiny s tvarohem", "fitness pečivo"],
+      "searchVolume": 1400
+    },
+    {
+      "id": "r-6",
+      "title": "Lososový salát s quinoou",
+      "slug": "lososovy-salat-s-quinoou",
+      "description": "Lehký a výživný salát s lososem - 28g proteinu na porci",
+      "category": "lunch",
+      "difficulty": "easy", 
+      "prepTime": 15,
+      "cookTime": 20,
+      "totalTime": 35,
+      "servings": 2,
+      "protein": 28.4,
+      "calories": 380,
+      "mainIngredient": "losos-filety",
+      "ingredients": [
+        {"name": "Losos filety", "amount": 200, "unit": "g", "protein": 40.0},
+        {"name": "Quinoa", "amount": 60, "unit": "g", "protein": 8.4},
+        {"name": "Avokádo", "amount": 1, "unit": "ks", "protein": 4.0},
+        {"name": "Rukola", "amount": 100, "unit": "g", "protein": 2.6},
+        {"name": "Cherry rajčátka", "amount": 150, "unit": "g", "protein": 1.35},
+        {"name": "Olivový olej", "amount": 2, "unit": "lžíce", "protein": 0}
+      ],
+      "instructions": [
+        "Uvařte quinou podle návodu",
+        "Opečte losos na olivovém oleji 4 minuty z každé strany",
+        "Nakrájejte avokádo a rajčátka",
+        "Smíchejte všechny ingredience",
+        "Ochutňte citronem a solí"
+      ],
+      "tags": ["losos", "salát", "quinoa", "zdravé", "oběd"],
+      "nutritionPer100g": {
+        "calories": 158,
+        "protein": 11.8,
+        "carbs": 6.2,
+        "fat": 9.4,
+        "fiber": 2.1
+      },
+      "relatedProducts": ["losos-filety", "quinoa"],
+      "seoKeywords": ["lososový salát", "salát s quinoou", "zdravý oběd", "fitness salát"],
+      "searchVolume": 1100
+    },
+    {
+      "id": "r-7",
+      "title": "Proteinové energy balls",
+      "slug": "proteinove-energy-balls",
+      "description": "Zdravé proteinové kuličky bez pečení - 6g proteinu na kus",
+      "category": "snacks",
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "totalTime": 20,
+      "servings": 16,
+      "protein": 6.1,
+      "calories": 95,
+      "mainIngredient": "arasidove-maslo-100",
+      "ingredients": [
+        {"name": "Arašídové máslo", "amount": 120, "unit": "g", "protein": 30.0},
+        {"name": "Ovesné vločky", "amount": 80, "unit": "g", "protein": 10.4},
+        {"name": "Med", "amount": 40, "unit": "g", "protein": 0.4},
+        {"name": "Chia semínka", "amount": 20, "unit": "g", "protein": 3.4},
+        {"name": "Kokos strouhaný", "amount": 30, "unit": "g", "protein": 2.1},
+        {"name": "Vanilkový extrakt", "amount": 1, "unit": "lžička", "protein": 0}
+      ],
+      "instructions": [
+        "Smíchejte všechny ingredience v míse",
+        "Nechte směs 30 minut v lednici ztužit",
+        "Tvarujte malé kuličky",
+        "Uložte v lednici",
+        "Spotřebujte do týdne"
+      ],
+      "tags": ["energy balls", "bez pečení", "arašídové máslo", "svačina", "zdravé"],
+      "nutritionPer100g": {
+        "calories": 395,
+        "protein": 25.4,
+        "carbs": 28.1,
+        "fat": 23.2,
+        "fiber": 6.8
+      },
+      "relatedProducts": ["arasidove-maslo-100", "ovesne-vlocky-jemne"],
+      "seoKeywords": ["proteinové kuličky", "energy balls", "bez pečení", "arašídové máslo recepty"],
+      "searchVolume": 2200
+    },
+    {
+      "id": "r-8", 
+      "title": "Tofu scramble s kurkumou",
+      "slug": "tofu-scramble-s-kurkumou",
+      "description": "Vegánská alternativa míchaných vajec - 18g rostlinného proteinu",
+      "category": "breakfast",
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "totalTime": 20,
+      "servings": 2,
+      "protein": 18.2,
+      "calories": 220,
+      "mainIngredient": "tofu-natural-lunter",
+      "ingredients": [
+        {"name": "Tofu natural", "amount": 200, "unit": "g", "protein": 30.0},
+        {"name": "Cibule", "amount": 1, "unit": "ks", "protein": 1.1},
+        {"name": "Paprika", "amount": 1, "unit": "ks", "protein": 1.0},
+        {"name": "Kurkuma", "amount": 1, "unit": "lžička", "protein": 0.5},
+        {"name": "Nutriční kvasnice", "amount": 2, "unit": "lžíce", "protein": 8.0},
+        {"name": "Olivový olej", "amount": 2, "unit": "lžíce", "protein": 0}
+      ],
+      "instructions": [
+        "Rozdrobte tofu vidličkou na kousky",
+        "Opražte cibuli a papriku na oleji",
+        "Přidejte tofu a kurkumu",
+        "Smažte 5 minut za občasného míchání",
+        "Přisypte nutriční kvasnice a dochutťte"
+      ],
+      "tags": ["tofu", "vegánské", "snídaně", "rostlinný protein", "kurkuma"],
+      "nutritionPer100g": {
+        "calories": 110,
+        "protein": 9.1,
+        "carbs": 4.2,
+        "fat": 6.8,
+        "fiber": 1.8
+      },
+      "relatedProducts": ["tofu-natural-lunter"],
+      "seoKeywords": ["tofu scramble", "vegánská snídaně", "tofu recepty", "rostlinný protein"],
+      "searchVolume": 880
+    }
+  ],
+  "categories": [
+    {"id": "breakfast", "name": "Snídaně", "slug": "snidane"},
+    {"id": "lunch", "name": "Oběd", "slug": "obed"}, 
+    {"id": "dinner", "name": "Večeře", "slug": "vecere"},
+    {"id": "snacks", "name": "Svačiny", "slug": "svaciny"},
+    {"id": "beverages", "name": "Nápoje", "slug": "napoje"}
+  ]
+}

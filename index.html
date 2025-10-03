@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Hunter - Najděte nejlepší poměr proteinu a ceny</title>
+    <meta name="description" content="Porovnání 45+ potravin podle ceny za gram proteinu. Recepty, kalkulačka a slovník proteinů pro fitness a zdraví.">
+    <meta name="keywords" content="protein, bílkoviny, cena proteinu, nejlevnější protein, fitness recepty, proteinové potraviny">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Protein Hunter - Najděte nejlepší poměr proteinu a ceny">
+    <meta property="og:description" content="Porovnání 45+ potravin podle ceny za gram proteinu. Recepty a kalkulačka proteinů.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://46.62.166.240/protein-hunter/">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Protein Hunter",
+        "description": "Databáze potravin s porovnáním ceny za gram proteinu",
+        "url": "http://46.62.166.240/protein-hunter/"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/protein-hunter/" class="text-xl font-bold text-primary">🥩 Protein Hunter</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/protein-hunter/produkty/" class="text-gray-700 hover:text-primary">Produkty</a>
+                    <a href="/protein-hunter/lean-proteins/" class="text-gray-700 hover:text-primary">Lean Proteiny</a>
+                    <a href="/protein-hunter/recepty/" class="text-gray-700 hover:text-primary">Recepty</a>
+                    <a href="/protein-hunter/slovnik/" class="text-gray-700 hover:text-primary">Slovník</a>
+                    <a href="/protein-hunter/porovnani/" class="text-gray-700 hover:text-primary">Porovnání</a>
+                    <a href="/protein-hunter/blog/" class="text-gray-700 hover:text-primary">Blog</a>
+                    <a href="/protein-hunter/kalkulacka.html" class="text-gray-700 hover:text-primary">Kalkulačka</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">🥩 Protein Hunter</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Najděte nejlepší poměr proteinu a ceny z 100+ potravin. 
+                Porovnejte ceny, objevte recepty a vypočítejte svou potřebu bílkovin.
+            </p>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-primary">103</div>
+                <div class="text-gray-600">Produktů v databázi</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-primary">19</div>
+                <div class="text-gray-600">Receptů s vysokým proteinem</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-primary">2.95</div>
+                <div class="text-gray-600">Nejlepší cena Kč/g</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-primary">20+</div>
+                <div class="text-gray-600">Pojmů ve slovníku</div>
+            </div>
+        </div>
+        
+        <!-- TOP Products -->
+        <div class="bg-white rounded-lg shadow mb-8">
+            <div class="px-6 py-4 border-b">
+                <h2 class="text-2xl font-semibold">🏆 TOP 5 nejlevnějších proteinů</h2>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center justify-between py-3 border-b hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🏆</span>
+                        <div>
+                            <h3 class="font-semibold text-primary">
+                                <a href="/protein-hunter/produkty/tvaroh-polotucny-pilos.html" class="hover:underline">Tvaroh polotučný Pilos</a>
+                            </h3>
+                            <div class="text-sm text-gray-600">Mléčné výrobky • 31.3g proteinu</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xl font-bold text-primary">1.18 Kč</div>
+                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between py-3 border-b hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🥈</span>
+                        <div>
+                            <h3 class="font-semibold text-primary">
+                                <a href="/protein-hunter/produkty/cottage-cheese-pribinacek.html" class="hover:underline">Cottage cheese Pribináček</a>
+                            </h3>
+                            <div class="text-sm text-gray-600">Mléčné výrobky • 22.0g proteinu</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xl font-bold text-primary">1.36 Kč</div>
+                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between py-3 border-b hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🥉</span>
+                        <div>
+                            <h3 class="font-semibold text-primary">
+                                <a href="/protein-hunter/produkty/recky-jogurt-0-milko.html" class="hover:underline">Řecký jogurt 0% Milko</a>
+                            </h3>
+                            <div class="text-sm text-gray-600">Mléčné výrobky • 14.0g proteinu</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xl font-bold text-primary">1.78 Kč</div>
+                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between py-3 border-b hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">4️⃣</span>
+                        <div>
+                            <h3 class="font-semibold text-primary">
+                                <a href="/protein-hunter/produkty/cervena-cocka.html" class="hover:underline">Červená čočka</a>
+                            </h3>
+                            <div class="text-sm text-gray-600">Luštěniny • 125.0g proteinu</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xl font-bold text-primary">0.32 Kč</div>
+                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between py-3 hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">5️⃣</span>
+                        <div>
+                            <h3 class="font-semibold text-primary">
+                                <a href="/protein-hunter/produkty/kureci-prsa.html" class="hover:underline">Kuřecí prsa</a>
+                            </h3>
+                            <div class="text-sm text-gray-600">Maso • 115.0g proteinu</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xl font-bold text-primary">1.39 Kč</div>
+                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold mb-3">📊 Produkty podle kategorií</h3>
+                <div class="space-y-2">
+                    <a href="/protein-hunter/kategorie/dairy.html" class="block text-primary hover:underline">Mléčné výrobky</a>
+                    <a href="/protein-hunter/kategorie/meat.html" class="block text-primary hover:underline">Maso</a>
+                    <a href="/protein-hunter/kategorie/fish.html" class="block text-primary hover:underline">Ryby a mořské plody</a>
+                    <a href="/protein-hunter/kategorie/vegan.html" class="block text-primary hover:underline">🌱 Veganské</a>
+                    <a href="/protein-hunter/kategorie/lowcarb.html" class="block text-primary hover:underline">🥑 Low Carb</a>
+                    <a href="/protein-hunter/kategorie/keto.html" class="block text-primary hover:underline">🥓 Keto</a>
+                    <a href="/protein-hunter/kategorie/highprotein.html" class="block text-primary hover:underline">💪 High Protein</a>
+                    <a href="/protein-hunter/produkty/" class="block text-primary hover:underline font-medium">Všechny produkty →</a>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold mb-3">🍽️ Recepty s vysokým proteinem</h3>
+                <div class="space-y-2">
+                    <a href="/protein-hunter/recepty/breakfast/" class="block text-primary hover:underline">Proteinové snídaně</a>
+                    <a href="/protein-hunter/recepty/lunch/" class="block text-primary hover:underline">Fitness obědy</a>
+                    <a href="/protein-hunter/recepty/dinner/" class="block text-primary hover:underline">Zdravé večeře</a>
+                    <a href="/protein-hunter/recepty/" class="block text-primary hover:underline font-medium">Všechny recepty →</a>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold mb-3">📰 Blog články</h3>
+                <div class="space-y-2">
+                    <a href="/protein-hunter/blog/nejlevnejsi-zdroje-proteinu-2025.html" class="block text-primary hover:underline">Nejlevnější zdroje proteinu</a>
+                    <a href="/protein-hunter/blog/protein-pro-zacatecniky-pruvodce.html" class="block text-primary hover:underline">Protein pro začátečníky</a>
+                    <a href="/protein-hunter/blog/rostlinne-vs-zivocisne-proteiny-srovnani.html" class="block text-primary hover:underline">Rostlinné vs. živočišné</a>
+                    <a href="/protein-hunter/blog/" class="block text-primary hover:underline font-medium">Všechny články →</a>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold mb-3">🔧 Nástroje</h3>
+                <div class="space-y-2">
+                    <a href="/protein-hunter/kalkulacka.html" class="block text-primary hover:underline">Protein kalkulačka</a>
+                    <a href="/protein-hunter/slovnik/" class="block text-primary hover:underline">Slovník pojmů</a>
+                    <a href="/protein-hunter/porovnani/" class="block text-primary hover:underline">Porovnání produktů</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">🥩 Protein Hunter</h3>
+                    <p class="text-gray-400 text-sm">Databáze proteinových potravin a receptů pro fitness nadšence.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Produkty</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/protein-hunter/produkty/" class="text-gray-400 hover:text-white">Všechny produkty</a></li>
+                        <li><a href="/protein-hunter/lean-proteins/" class="text-gray-400 hover:text-white">Lean Proteiny</a></li>
+                        <li><a href="/protein-hunter/kategorie/meat.html" class="text-gray-400 hover:text-white">Maso</a></li>
+                        <li><a href="/protein-hunter/kategorie/fish.html" class="text-gray-400 hover:text-white">Ryby</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Obsah</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/protein-hunter/recepty/" class="text-gray-400 hover:text-white">Recepty</a></li>
+                        <li><a href="/protein-hunter/slovnik/" class="text-gray-400 hover:text-white">Slovník</a></li>
+                        <li><a href="/protein-hunter/porovnani/" class="text-gray-400 hover:text-white">Porovnání</a></li>
+                        <li><a href="/protein-hunter/blog/" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Nástroje</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/protein-hunter/kalkulacka.html" class="text-gray-400 hover:text-white">Kalkulačka proteinu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Protein Hunter. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovník proteinových pojmů - 15 definic pro fitness a výživu</title>
+    <meta name="description" content="Kompletní slovník proteinových a fitness pojmů. 15 definic aminokyselin, doplňků stravy a výživy.">
+    <meta name="keywords" content="slovník proteinů, fitness pojmy, aminokyseliny, doplňky stravy, sportovní výživa">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/protein-hunter/" class="text-xl font-bold text-primary">🥩 Protein Hunter</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/protein-hunter/produkty/" class="text-gray-700 hover:text-primary">Produkty</a>
+                    <a href="/protein-hunter/lean-proteins/" class="text-gray-700 hover:text-primary">Lean Proteiny</a>
+                    <a href="/protein-hunter/recepty/" class="text-gray-700 hover:text-primary">Recepty</a>
+                    <a href="/protein-hunter/slovnik/" class="text-gray-700 hover:text-primary">Slovník</a>
+                    <a href="/protein-hunter/porovnani/" class="text-gray-700 hover:text-primary">Porovnání</a>
+                    <a href="/protein-hunter/blog/" class="text-gray-700 hover:text-primary">Blog</a>
+                    <a href="/protein-hunter/kalkulacka.html" class="text-gray-700 hover:text-primary">Kalkulačka</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">📚 Slovník proteinových pojmů</h1>
+            <p class="text-xl text-gray-600">
+                15 definic a vysvětlení pojmů z oblasti proteinů, fitness a sportovní výživy.
+            </p>
+        </div>
+        
+        <!-- Search box -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <div class="relative">
+                <input type="text" id="searchBox" placeholder="Hledat v slovníku..." 
+                       class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <span class="text-gray-400">🔍</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alphabet navigation -->
+        <div class="bg-white rounded-lg shadow p-4 mb-8">
+            <div class="flex flex-wrap gap-2 justify-center">
+                
+                    <a href="#A" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">A</a>
+                
+                    <a href="#B" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">B</a>
+                
+                    <a href="#C" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">C</a>
+                
+                    <a href="#D" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">D</a>
+                
+                    <a href="#E" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">E</a>
+                
+                    <a href="#F" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">F</a>
+                
+                    <a href="#G" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">G</a>
+                
+                    <a href="#H" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">H</a>
+                
+                    <a href="#I" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">I</a>
+                
+                    <a href="#J" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">J</a>
+                
+                    <a href="#K" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">K</a>
+                
+                    <a href="#L" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">L</a>
+                
+                    <a href="#M" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">M</a>
+                
+                    <a href="#N" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">N</a>
+                
+                    <a href="#O" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">O</a>
+                
+                    <a href="#P" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">P</a>
+                
+                    <a href="#Q" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">Q</a>
+                
+                    <a href="#R" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">R</a>
+                
+                    <a href="#S" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">S</a>
+                
+                    <a href="#T" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">T</a>
+                
+                    <a href="#U" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">U</a>
+                
+                    <a href="#V" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">V</a>
+                
+                    <a href="#W" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">W</a>
+                
+                    <a href="#X" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">X</a>
+                
+                    <a href="#Y" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">Y</a>
+                
+                    <a href="#Z" class="px-3 py-1 text-sm border rounded hover:bg-primary hover:text-white transition-colors">Z</a>
+                
+            </div>
+        </div>
+        
+        <!-- Terms list -->
+        <div class="bg-white rounded-lg shadow" id="termsList">
+            <div class="px-6 py-4 border-b">
+                <h2 class="text-xl font-semibold">📋 Všechny pojmy</h2>
+            </div>
+            <div class="divide-y divide-gray-100">
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="aminokyseliny">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="A">
+                                <a href="/protein-hunter/slovnik/aminokyseliny.html" class="hover:underline">Aminokyseliny</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Základní pojmy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Stavební kameny bílkovin. Existuje 20 aminokyselin, z nichž 9 je esenciálních (tělo si je nedokáže vyrobit).</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">esenciální aminokyseliny</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">BCAA</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">protein</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="anabolické okno">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="A">
+                                <a href="/protein-hunter/slovnik/anabolicke-okno.html" class="hover:underline">Anabolické okno</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Trénink</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Období po tréninku, kdy tělo nejvíce potřebuje protein pro regeneraci. Moderní výzkum ukazuje, že je méně kritické než se myslelo.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">regenerace</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">protein timing</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">post-workout</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="bcaa">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="B">
+                                <a href="/protein-hunter/slovnik/bcaa.html" class="hover:underline">BCAA</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Doplňky stravy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Branched-Chain Amino Acids - aminokyseliny s rozvětveným řetězcem (leucin, isoleucin, valin). Důležité pro regeneraci svalů.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">leucin</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">aminokyseliny</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">regenerace</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="biologická hodnota">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="B">
+                                <a href="/protein-hunter/slovnik/biologicka-hodnota.html" class="hover:underline">Biologická hodnota</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Základní pojmy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Míra kvality proteinu - jak efektivně tělo dokáže využít protein z potraviny pro syntézu vlastních bílkovin.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">kompletní protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">aminokyseliny</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">kvalita proteinu</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="denní doporučený příjem proteinu">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="D">
+                                <a href="/protein-hunter/slovnik/denni-doporuceny-prijem-proteinu.html" class="hover:underline">Denní doporučený příjem proteinu</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Výživa</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Pro sedavý životní styl 0.8g/kg, rekreační sport 1.2-1.6g/kg, silový trénink 1.6-2.2g/kg tělesné hmotnosti.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">výživa</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">trénink</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="esenciální aminokyseliny">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="E">
+                                <a href="/protein-hunter/slovnik/esencialni-aminokyseliny.html" class="hover:underline">Esenciální aminokyseliny</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Základní pojmy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">9 aminokyselin, které si tělo nedokáže samo vyrobit a musí je získat z potravy: leucin, isoleucin, valin, lysin, methionin, fenylalanin, threonin, tryptofan, histidin.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">aminokyseliny</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">BCAA</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">kompletní protein</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="izolát">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="I">
+                                <a href="/protein-hunter/slovnik/izolat.html" class="hover:underline">Izolát</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Doplňky stravy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Whey protein isolate - nejčistší forma syrovátkového proteinu (90-95% proteinu), minimální laktóza a tuky.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">whey protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">koncentrát</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">čistota proteinu</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="kasein">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="K">
+                                <a href="/protein-hunter/slovnik/kasein.html" class="hover:underline">Kasein</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Doplňky stravy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Pomalu se vstřebávající protein z mléka. Ideální před spaním pro dlouhodobé zásobování svalů aminokyselinami.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">whey protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">mléčný protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">noční regenerace</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="kompletní protein">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="K">
+                                <a href="/protein-hunter/slovnik/kompletni-protein.html" class="hover:underline">Kompletní protein</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Základní pojmy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Protein obsahující všech 9 esenciálních aminokyselin v dostatečném množství. Typicky živočišné zdroje a quinoa, sója.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">aminokyseliny</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">biologická hodnota</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">esenciální aminokyseliny</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="leucin">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="L">
+                                <a href="/protein-hunter/slovnik/leucin.html" class="hover:underline">Leucin</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Doplňky stravy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Nejdůležitější aminokyselina pro růst svalů. Aktivuje mTOR dráhu, která spouští syntézu svalových bílkovin.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">BCAA</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">syntéza proteinu</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">svalový růst</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="protein">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="P">
+                                <a href="/protein-hunter/slovnik/protein.html" class="hover:underline">Protein</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Základní pojmy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Bílkovina je složitá organická sloučenina složená z aminokyselin. Je nezbytná pro růst, opravy a funkce všech buněk v těle.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">aminokyseliny</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">biologická hodnota</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">kompletní protein</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="protein powder">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="P">
+                                <a href="/protein-hunter/slovnik/protein-powder.html" class="hover:underline">Protein powder</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Doplňky stravy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Sušený proteinový prášek - nejčastěji whey, kasein nebo rostlinné proteiny. Praktický způsob doplnění proteinu.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">whey protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">kasein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">doplňky</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="rostlinný protein">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="R">
+                                <a href="/protein-hunter/slovnik/rostlinny-protein.html" class="hover:underline">Rostlinný protein</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Výživa</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Protein z rostlinných zdrojů jako jsou luštěniny, ořechy, sója, tofu. Často nekompletní, ale kombinací lze získat všechny aminokyseliny.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">kompletní protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">vegan</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">luštěniny</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="syntéza svalových bílkovin (mps)">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="S">
+                                <a href="/protein-hunter/slovnik/synteza-svalovych-bilkovin.html" class="hover:underline">Syntéza svalových bílkovin (MPS)</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Trénink</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Muscle Protein Synthesis - proces tvorby nových svalových bílkovin. Stimulován proteinem, především leucinem a tréninkem.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">leucin</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">protein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">regenerace</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-6 hover:bg-gray-50 transition-colors" data-term="whey protein">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold text-primary mb-1" id="W">
+                                <a href="/protein-hunter/slovnik/whey-protein.html" class="hover:underline">Whey protein</a>
+                            </h3>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Doplňky stravy</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Syrovátkový protein získaný při výrobě sýra. Rychle se vstřebává a má vysokou biologickou hodnotu.</p>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="text-gray-500">Související:</span>
+                            
+                                <span class="text-primary hover:underline cursor-pointer">kasein</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">protein powder</span>
+                            , 
+                                <span class="text-primary hover:underline cursor-pointer">biologická hodnota</span>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">🥩 Protein Hunter</h3>
+                    <p class="text-gray-400 text-sm">Databáze proteinových potravin a receptů pro fitness nadšence.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Produkty</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/protein-hunter/produkty/" class="text-gray-400 hover:text-white">Všechny produkty</a></li>
+                        <li><a href="/protein-hunter/lean-proteins/" class="text-gray-400 hover:text-white">Lean Proteiny</a></li>
+                        <li><a href="/protein-hunter/kategorie/meat.html" class="text-gray-400 hover:text-white">Maso</a></li>
+                        <li><a href="/protein-hunter/kategorie/fish.html" class="text-gray-400 hover:text-white">Ryby</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Obsah</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/protein-hunter/recepty/" class="text-gray-400 hover:text-white">Recepty</a></li>
+                        <li><a href="/protein-hunter/slovnik/" class="text-gray-400 hover:text-white">Slovník</a></li>
+                        <li><a href="/protein-hunter/porovnani/" class="text-gray-400 hover:text-white">Porovnání</a></li>
+                        <li><a href="/protein-hunter/blog/" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Nástroje</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/protein-hunter/kalkulacka.html" class="text-gray-400 hover:text-white">Kalkulačka proteinu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Protein Hunter. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const terms = document.querySelectorAll('[data-term]');
+            
+            terms.forEach(term => {
+                const termText = term.getAttribute('data-term');
+                if (termText.includes(searchTerm)) {
+                    term.style.display = 'block';
+                } else {
+                    term.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

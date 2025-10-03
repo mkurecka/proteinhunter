@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Protein Hunter - Najděte nejlepší poměr proteinu a ceny</title>
+    <meta name="description" id="pageDescription" content="Porovnání 45+ potravin podle ceny za gram proteinu. Recepty, kalkulačka a slovník proteinů. Najděte nejlevnější zdroje bílkovin pro fitness a zdraví.">
+    <meta name="keywords" id="pageKeywords" content="protein, bílkoviny, cena proteinu, nejlevnější protein, fitness recepty, proteinové potraviny">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" id="ogTitle" content="Protein Hunter - Najděte nejlepší poměr proteinu a ceny">
+    <meta property="og:description" id="ogDescription" content="Porovnání 45+ potravin podle ceny za gram proteinu. Recepty a kalkulačka proteinů.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" id="ogUrl" content="http://46.62.166.240/protein-hunter/seo.html">
+    <meta property="og:image" content="http://46.62.166.240/protein-hunter/og-image.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json" id="structuredData">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Protein Hunter",
+      "description": "Databáze potravin s porovnáním ceny za gram proteinu",
+      "url": "http://46.62.166.240/protein-hunter/"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/protein-hunter/" onclick="navigateTo('/'); return false;" class="text-xl font-bold text-primary">🥩 Protein Hunter</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/protein-hunter/produkty" onclick="navigateTo('/produkty'); return false;" class="text-gray-700 hover:text-primary transition-colors">Produkty</a>
+                    <a href="/protein-hunter/recepty" onclick="navigateTo('/recepty'); return false;" class="text-gray-700 hover:text-primary transition-colors">Recepty</a>
+                    <a href="/protein-hunter/slovnik" onclick="navigateTo('/slovnik'); return false;" class="text-gray-700 hover:text-primary transition-colors">Slovník</a>
+                    <a href="/protein-hunter/kalkulacka" onclick="navigateTo('/kalkulacka'); return false;" class="text-gray-700 hover:text-primary transition-colors">Kalkulačka</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <nav class="text-sm" id="breadcrumbs">
+            <span class="text-gray-500">Domů</span>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6" id="mainContent">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Protein Hunter</h3>
+                    <p class="text-gray-300">Najděte nejlepší poměr proteinu a ceny z 45+ potravin.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Produkty</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" onclick="showCategory('dairy')" class="hover:text-white">Mléčné výrobky</a></li>
+                        <li><a href="#" onclick="showCategory('meat')" class="hover:text-white">Maso</a></li>
+                        <li><a href="#" onclick="showCategory('fish')" class="hover:text-white">Ryby</a></li>
+                        <li><a href="#" onclick="showCategory('legumes')" class="hover:text-white">Luštěniny</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Recepty</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" onclick="showRecipeCategory('breakfast')" class="hover:text-white">Snídaně</a></li>
+                        <li><a href="#" onclick="showRecipeCategory('lunch')" class="hover:text-white">Obědy</a></li>
+                        <li><a href="#" onclick="showRecipeCategory('dinner')" class="hover:text-white">Večeře</a></li>
+                        <li><a href="#" onclick="showRecipeCategory('snacks')" class="hover:text-white">Svačiny</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Zdroje</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" onclick="showDictionary()" class="hover:text-white">Slovník pojmů</a></li>
+                        <li><a href="#" onclick="showCalculator()" class="hover:text-white">Protein kalkulačka</a></li>
+                        <li><a href="#" onclick="showComparisons()" class="hover:text-white">Porovnání</a></li>
+                        <li><a href="#" onclick="showComparisonSelector()" class="hover:text-white">Vybrat produkty</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 Protein Hunter. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load external data
+        let productsData = [];
+        let recipesData = [];
+        let dictionaryData = [];
+        
+        // Load recipes data
+        const recipesDatabase = {
+            "recipes": [
+                {
+                    "id": "r-1",
+                    "title": "Proteinové palačinky s tvarohem",
+                    "slug": "proteinove-palacinky-s-tvarohem",
+                    "description": "Rychlé a zdravé palačinky s vysokým obsahem bílkovin - ideální snídaně pro sportovce",
+                    "category": "breakfast",
+                    "difficulty": "easy",
+                    "prepTime": 10,
+                    "cookTime": 15,
+                    "totalTime": 25,
+                    "servings": 4,
+                    "protein": 28.5,
+                    "calories": 320,
+                    "ingredients": [
+                        {"name": "Tvaroh polotučný", "amount": 200, "unit": "g", "protein": 25.0},
+                        {"name": "Vejce", "amount": 2, "unit": "ks", "protein": 13.8},
+                        {"name": "Ovesné vločky", "amount": 40, "unit": "g", "protein": 5.2}
+                    ],
+                    "instructions": [
+                        "Rozmixujte tvaroh, vejce, ovesné vločky, mléko a banán na hladké těsto",
+                        "Nechte těsto 5 minut odpočinout",
+                        "Smažte na pánvi z obou stran"
+                    ],
+                    "tags": ["vysoký protein", "snídaně", "fitness"],
+                    "seoKeywords": ["proteinové palačinky", "fitness snídaně"]
+                },
+                {
+                    "id": "r-2",
+                    "title": "Proteinové smoothie s whey proteinem",
+                    "slug": "proteinove-smoothie-s-whey-proteinem",
+                    "description": "Rychlý proteinový nápoj ideální po tréninku",
+                    "category": "beverages",
+                    "difficulty": "easy",
+                    "prepTime": 5,
+                    "cookTime": 0,
+                    "totalTime": 5,
+                    "servings": 1,
+                    "protein": 35.0,
+                    "calories": 280,
+                    "ingredients": [
+                        {"name": "Whey protein", "amount": 30, "unit": "g", "protein": 24.6},
+                        {"name": "Banán", "amount": 1, "unit": "ks", "protein": 1.1},
+                        {"name": "Mléko", "amount": 250, "unit": "ml", "protein": 8.25}
+                    ],
+                    "instructions": [
+                        "Všechny ingredience vložte do mixeru",
+                        "Mixujte 30-60 sekund do hladka",
+                        "Nalijte do sklenice a ihned podejte"
+                    ],
+                    "tags": ["rychlé", "po tréninku", "whey protein"],
+                    "seoKeywords": ["proteinové smoothie", "whey smoothie"]
+                }
+            ]
+        };
+        
+        // Process recipes data
+        recipesData = recipesDatabase.recipes;
+        
+        // Complete products database with SEO-optimized slugs
+        const productsDatabase = [
+            { id: 1, name: "Tvaroh polotučný Pilos", price: 36.90, weight: 250, proteinPer100g: 12.5, category: "dairy", slug: "tvaroh-polotucny-pilos", description: "Polotučný tvaroh s 12.5g proteinu na 100g" },
+            { id: 2, name: "Kuřecí prsa", price: 159.90, weight: 500, proteinPer100g: 23.0, category: "meat", slug: "kureci-prsa", description: "Čerstvá kuřecí prsa s vysokým obsahem proteinu" },
+            { id: 3, name: "Řecký jogurt 0% Milko", price: 24.90, weight: 140, proteinPer100g: 10.0, category: "dairy", slug: "recky-jogurt-0-milko", description: "Řecký jogurt bez tuku s 10g proteinu" },
+            { id: 4, name: "Cottage cheese Pribináček", price: 29.90, weight: 200, proteinPer100g: 11.0, category: "dairy", slug: "cottage-cheese-pribinacek", description: "Cottage cheese s 11g proteinu na 100g" },
+            { id: 5, name: "Červená čočka", price: 39.90, weight: 500, proteinPer100g: 25.0, category: "legumes", slug: "cervena-cocka", description: "Červená čočka suchá s 25g proteinu" },
+            { id: 6, name: "Fazole bílé", price: 34.90, weight: 500, proteinPer100g: 21.0, category: "legumes", slug: "fazole-bile", description: "Bílé fazole suché s 21g proteinu" },
+            { id: 7, name: "Proteinová tyčinka Nutrend", price: 45.00, weight: 55, proteinPer100g: 36.0, category: "supplements", slug: "proteinova-tycinka-nutrend", description: "Proteinová tyčinka s 36g proteinu na 100g" },
+            { id: 8, name: "Whey protein MyProtein", price: 599.00, weight: 1000, proteinPer100g: 82.0, category: "supplements", slug: "whey-protein-myprotein", description: "Syrovátkový protein s 82g proteinu na 100g" },
+            { id: 9, name: "Vejce M (10ks)", price: 54.90, weight: 530, proteinPer100g: 13.0, category: "other", slug: "vejce-m-10ks", description: "Čerstvá vejce velikost M, 10 kusů" },
+            { id: 10, name: "Tuňák ve vlastní šťávě", price: 44.90, weight: 160, proteinPer100g: 26.0, category: "fish", slug: "tunak-vlastni-stava", description: "Tuňák konzervovaný ve vlastní šťávě" },
+            { id: 11, name: "Arašídové máslo 100%", price: 89.90, weight: 340, proteinPer100g: 25.0, category: "nuts", slug: "arasidove-maslo-100", description: "100% arašídové máslo bez přidaných látek" },
+            { id: 12, name: "Skyr natural Pilos", price: 24.90, weight: 150, proteinPer100g: 11.0, category: "dairy", slug: "skyr-natural-pilos", description: "Islandský skyr s 11g proteinu" },
+            { id: 13, name: "Hovězí mleté maso", price: 189.90, weight: 500, proteinPer100g: 20.0, category: "meat", slug: "hovezi-mlete-maso", description: "Čerstvé hovězí mleté maso" },
+            { id: 14, name: "Sójové boby", price: 49.90, weight: 500, proteinPer100g: 36.0, category: "legumes", slug: "sojove-boby", description: "Sójové boby suché s 36g proteinu" },
+            { id: 15, name: "Losos filety", price: 249.90, weight: 300, proteinPer100g: 20.0, category: "fish", slug: "losos-filety", description: "Čerstvé lososové filety" },
+            { id: 16, name: "Tvaroh odtučněný Billa", price: 34.90, weight: 250, proteinPer100g: 14.0, category: "dairy", slug: "tvaroh-odtucneny-billa", description: "Odtučněný tvaroh s 14g proteinu" },
+            { id: 17, name: "Eidam 30% plátky Albert", price: 42.90, weight: 100, proteinPer100g: 27.0, category: "dairy", slug: "eidam-30-platky-albert", description: "Eidam 30% tuku v plátkach" },
+            { id: 18, name: "Krůtí prsa", price: 179.90, weight: 500, proteinPer100g: 24.0, category: "meat", slug: "kruti-prsa", description: "Čerstvá krůtí prsa s 24g proteinu" },
+            { id: 19, name: "Vepřová panenka", price: 149.90, weight: 400, proteinPer100g: 21.0, category: "meat", slug: "veprova-panenka", description: "Vepřová panenka - nejchutnější část" },
+            { id: 20, name: "Mozzarella light Galbani", price: 37.90, weight: 125, proteinPer100g: 19.0, category: "dairy", slug: "mozzarella-light-galbani", description: "Lehká mozzarella s 19g proteinu" },
+            { id: 21, name: "Quinoa", price: 89.90, weight: 500, proteinPer100g: 14.0, category: "other", slug: "quinoa", description: "Pseudocereálie quinoa s kompletním aminokyselinovým profilem" },
+            { id: 22, name: "Tofu natural Lunter", price: 49.90, weight: 180, proteinPer100g: 15.0, category: "other", slug: "tofu-natural-lunter", description: "Přírodní tofu z českých sójových bobů" },
+            { id: 23, name: "Sardinkový filety v oleji", price: 32.90, weight: 125, proteinPer100g: 25.0, category: "fish", slug: "sardinkove-filety-olej", description: "Sardinkové filety konzervované v oleji" },
+            { id: 24, name: "Šunka od kosti 95% masa", price: 44.90, weight: 100, proteinPer100g: 22.0, category: "meat", slug: "sunka-od-kosti-95", description: "Kvalitní šunka s 95% podílem masa" },
+            { id: 25, name: "Cizrna suchá", price: 44.90, weight: 500, proteinPer100g: 20.0, category: "legumes", slug: "cizrna-sucha", description: "Suchá cizrna s 20g proteinu na 100g" },
+            { id: 26, name: "Ovesné vločky jemné", price: 29.90, weight: 500, proteinPer100g: 13.0, category: "other", slug: "ovesne-vlocky-jemne", description: "Jemné ovesné vločky pro zdravou snídani" },
+            { id: 27, name: "Žervé Fitness 0,2% tuku", price: 27.90, weight: 150, proteinPer100g: 13.5, category: "dairy", slug: "zerve-fitness-02", description: "Fitness žervé s minimálním obsahem tuku" },
+            { id: 28, name: "Sýr Lučina Active", price: 32.90, weight: 150, proteinPer100g: 10.5, category: "dairy", slug: "syr-lucina-active", description: "Krémový sýr Lučina Active" },
+            { id: 29, name: "Pangasius filety mražené", price: 69.90, weight: 400, proteinPer100g: 15.0, category: "fish", slug: "pangasius-filety-mrazene", description: "Mražené filety pangasia" },
+            { id: 30, name: "Hrách zelený suchý", price: 32.90, weight: 500, proteinPer100g: 22.0, category: "legumes", slug: "hrach-zeleny-suchy", description: "Zelený hrách suchý s 22g proteinu" },
+            { id: 31, name: "Mléko polotučné Kunín", price: 24.90, weight: 1000, proteinPer100g: 3.3, category: "dairy", slug: "mleko-polotucne-kunin", description: "Polotučné mléko 1,5% tuku" },
+            { id: 32, name: "Kešu ořechy natural", price: 129.90, weight: 200, proteinPer100g: 18.0, category: "nuts", slug: "kesu-orechy-natural", description: "Přírodní kešu ořechy bez soli" },
+            { id: 33, name: "Proteinový pudink Ehrmann", price: 29.90, weight: 200, proteinPer100g: 10.0, category: "dairy", slug: "proteinovy-pudink-ehrmann", description: "Proteinový pudink s 10g proteinu" },
+            { id: 34, name: "Seitan bio", price: 89.90, weight: 200, proteinPer100g: 25.0, category: "other", slug: "seitan-bio", description: "Bio seitan - pšeničný protein" },
+            { id: 35, name: "Vejce L (10ks)", price: 64.90, weight: 630, proteinPer100g: 13.0, category: "other", slug: "vejce-l-10ks", description: "Čerstvá vejce velikost L, 10 kusů" },
+            { id: 36, name: "Ricotta Galbani", price: 49.90, weight: 250, proteinPer100g: 8.5, category: "dairy", slug: "ricotta-galbani", description: "Italský sýr ricotta" },
+            { id: 37, name: "Makrela uzená", price: 79.90, weight: 250, proteinPer100g: 18.0, category: "fish", slug: "makrela-uzena", description: "Uzená makrela s 18g proteinu" },
+            { id: 38, name: "Slunečnicová semínka", price: 34.90, weight: 200, proteinPer100g: 21.0, category: "nuts", slug: "slunecnicova-seminko", description: "Přírodní slunečnicová semínka" },
+            { id: 39, name: "Kefír nízkotučný Hollandia", price: 19.90, weight: 500, proteinPer100g: 3.0, category: "dairy", slug: "kefir-nizkotucny-hollandia", description: "Nízkotučný kefír s probiotiky" },
+            { id: 40, name: "Tempeh", price: 79.90, weight: 170, proteinPer100g: 19.0, category: "other", slug: "tempeh", description: "Fermentovaný sójový produkt tempeh" },
+            { id: 41, name: "Gouda 48% plátky Madeta", price: 49.90, weight: 100, proteinPer100g: 25.0, category: "dairy", slug: "gouda-48-platky-madeta", description: "Gouda sýr 48% tuku v plátkach" },
+            { id: 42, name: "Čočka zelená", price: 44.90, weight: 500, proteinPer100g: 24.0, category: "legumes", slug: "cocka-zelena", description: "Zelená čočka s 24g proteinu" },
+            { id: 43, name: "Proteinová kaše Bombus", price: 39.90, weight: 65, proteinPer100g: 30.0, category: "supplements", slug: "proteinova-kase-bombus", description: "Instantní proteinová kaše" },
+            { id: 44, name: "Balkánský sýr Madeta", price: 39.90, weight: 200, proteinPer100g: 16.0, category: "dairy", slug: "balkansky-syr-madeta", description: "Balkánský sýr v nálevu" },
+            { id: 45, name: "Mandle natural", price: 159.90, weight: 200, proteinPer100g: 21.0, category: "nuts", slug: "mandle-natural", description: "Přírodní mandle bez soli a přídavků" }
+        ];
+        
+        // Process products data with enhanced metrics
+        productsData = productsDatabase.map(product => {
+            const totalProtein = (product.weight / 100) * product.proteinPer100g;
+            const pricePerGramProtein = product.price / totalProtein;
+            const proteinPerCrown = totalProtein / product.price;
+            const proteinDensity = product.proteinPer100g / 100; // protein percentage
+            
+            return {
+                ...product,
+                totalProtein: Math.round(totalProtein * 10) / 10,
+                pricePerGramProtein: Math.round(pricePerGramProtein * 100) / 100,
+                proteinPerCrown: Math.round(proteinPerCrown * 100) / 100,
+                proteinDensity: Math.round(proteinDensity * 1000) / 10, // as percentage
+                efficiencyScore: Math.round((proteinPerCrown * 10 + product.proteinPer100g) / 2 * 10) / 10
+            };
+        });
+        
+        const categoryNames = {
+            'dairy': 'Mléčné výrobky',
+            'meat': 'Maso',
+            'fish': 'Ryby',
+            'legumes': 'Luštěniny',
+            'nuts': 'Ořechy a semena',
+            'supplements': 'Doplňky stravy',
+            'other': 'Ostatní'
+        };
+        
+        const categoryDescriptions = {
+            'dairy': 'Nejkompletnější zdroj proteinu s vysokou biologickou hodnotou',
+            'meat': 'Vysoce kvalitní protein s kompletním aminokyselinovým profilem',
+            'fish': 'Zdravý protein s omega-3 mastnými kyselinami',
+            'legumes': 'Rostlinný protein bohatý na vlákninu a minerály',
+            'nuts': 'Protein kombinovaný se zdravými tuky a vitamíny',
+            'supplements': 'Koncentrovaný protein pro maximální efektivitu',
+            'other': 'Rozmanité zdroje proteinu pro pestrout stravy'
+        };
+        
+        // SEO functions with URL management
+        function updateSEO(title, description, keywords, structuredData, url) {
+            document.getElementById('pageTitle').textContent = title;
+            document.getElementById('pageDescription').setAttribute('content', description);
+            document.getElementById('pageKeywords').setAttribute('content', keywords);
+            document.getElementById('ogTitle').setAttribute('content', title);
+            document.getElementById('ogDescription').setAttribute('content', description);
+            
+            // Update URL without page reload
+            if (url && url !== window.location.pathname.replace('/protein-hunter', '')) {
+                const fullUrl = `http://46.62.166.240/protein-hunter${url}`;
+                document.getElementById('ogUrl').setAttribute('content', fullUrl);
+                
+                // Update browser URL
+                const newPath = `/protein-hunter${url}`;
+                if (window.location.pathname !== newPath) {
+                    history.pushState({page: url}, title, newPath);
+                }
+            }
+            
+            if (structuredData) {
+                document.getElementById('structuredData').textContent = JSON.stringify(structuredData);
+            }
+        }
+        
+        // URL Router
+        function handleRouting() {
+            const path = window.location.pathname.replace('/protein-hunter', '') || '/';
+            
+            console.log('Routing to:', path); // Debug
+            
+            // Route handling
+            if (path === '/' || path === '' || path === '/seo.html') {
+                showHomepage();
+            } else if (path === '/produkty') {
+                showAllProducts();
+            } else if (path.startsWith('/produkty/')) {
+                const slug = path.replace('/produkty/', '');
+                showProductDirect(slug);
+            } else if (path.startsWith('/kategorie/')) {
+                const category = path.replace('/kategorie/', '');
+                showCategoryDirect(category);
+            } else if (path === '/recepty') {
+                showAllRecipes();
+            } else if (path.startsWith('/recepty/')) {
+                const parts = path.replace('/recepty/', '');
+                if (['breakfast', 'lunch', 'dinner', 'beverages'].includes(parts)) {
+                    showRecipeCategoryDirect(parts);
+                } else {
+                    showRecipeDirect(parts);
+                }
+            } else if (path === '/slovnik') {
+                showDictionary();
+            } else if (path === '/kalkulacka') {
+                showCalculator();
+            } else if (path === '/porovnani') {
+                showComparisons();
+            } else if (path.startsWith('/porovnani/')) {
+                const comparison = path.replace('/porovnani/', '');
+                if (comparison.includes('-vs-')) {
+                    const [product1, product2] = comparison.split('-vs-');
+                    showComparisonDirect(product1, product2);
+                } else {
+                    showComparisonSelector();
+                }
+            } else {
+                show404();
+            }
+        }
+        
+        // Direct functions that don't change URL (for routing)
+        function showProductDirect(slug) {
+            const product = productsData.find(p => p.slug === slug);
+            if (!product) { show404(); return; }
+            
+            updateSEO(
+                `${product.name} - Protein ${product.proteinPer100g}g/100g za ${product.pricePerGramProtein.toFixed(2)} Kč/g`,
+                `${product.name}: ${product.proteinPer100g}g proteinu na 100g, celkem ${product.totalProtein}g za ${product.price} Kč.`,
+                `${product.name}, protein, cena proteinu, ${categoryNames[product.category].toLowerCase()}`,
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": product.name,
+                    "description": `${product.name} obsahuje ${product.proteinPer100g}g proteinu na 100g`
+                }
+            );
+            
+            // Show product content (reuse existing function logic)
+            const originalShowProduct = showProduct;
+            originalShowProduct.call(this, slug);
+        }
+        
+        function showCategoryDirect(category) {
+            if (!categoryNames[category]) { show404(); return; }
+            showCategory(category);
+        }
+        
+        function showRecipeDirect(slug) {
+            const recipe = recipesData.find(r => r.slug === slug);
+            if (!recipe) { show404(); return; }
+            showRecipe(slug);
+        }
+        
+        function showRecipeCategoryDirect(category) {
+            showRecipeCategory(category);
+        }
+        
+        function showComparisonDirect(product1Slug, product2Slug) {
+            const product1 = productsData.find(p => p.slug === product1Slug);
+            const product2 = productsData.find(p => p.slug === product2Slug);
+            if (!product1 || !product2) { show404(); return; }
+            showComparison(product1Slug, product2Slug);
+        }
+        
+        // 404 page
+        function show404() {
+            updateSEO(
+                'Stránka nenalezena - Protein Hunter',
+                'Požadovaná stránka nebyla nalezena. Vraťte se na hlavní stránku a najděte nejlepší proteinové potraviny.',
+                'chyba 404, stránka nenalezena, protein hunter'
+            );
+            
+            const content = `
+                <div class="text-center py-16">
+                    <div class="text-8xl mb-8">🥩</div>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Stránka nenalezena</h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Omlouváme se, ale požadovaná stránka nebyla nalezena.
+                    </p>
+                    <div class="space-x-4">
+                        <button onclick="navigateTo('/')" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors">
+                            🏠 Zpět na hlavní stránku
+                        </button>
+                        <button onclick="navigateTo('/produkty')" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                            📊 Prohlédnout produkty
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        function updateBreadcrumbs(path) {
+            const breadcrumbs = document.getElementById('breadcrumbs');
+            breadcrumbs.innerHTML = path.map((item, index) => 
+                index === path.length - 1 
+                    ? `<span class="text-gray-900 font-medium">${item.name}</span>`
+                    : `<a href="#" onclick="${item.action}" class="text-gray-500 hover:text-primary">${item.name}</a> <span class="mx-2 text-gray-400">/</span>`
+            ).join('');
+        }
+        
+        // Homepage
+        function showHomepage() {
+            updateSEO(
+                'Protein Hunter - Najděte nejlepší poměr proteinu a ceny',
+                'Porovnání 45+ potravin podle ceny za gram proteinu. Recepty, kalkulačka a slovník proteinů pro fitness a zdraví.',
+                'protein, bílkoviny, cena proteinu, nejlevnější protein, fitness recepty, proteinové potraviny'
+            );
+            
+            updateBreadcrumbs([{name: 'Domů', action: 'showHomepage()'}]);
+            
+            const content = `
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">🥩 Protein Hunter</h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Najděte nejlepší poměr proteinu a ceny z 45+ potravin. 
+                        Porovnejte ceny, objevte recepty a vypočítejte svou potřebu bílkovin.
+                    </p>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">${productsData.length}</div>
+                        <div class="text-gray-600">Produktů v databázi</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">8</div>
+                        <div class="text-gray-600">Receptů s vysokým proteinem</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">${Math.min(...productsData.map(p => p.pricePerGramProtein)).toFixed(2)}</div>
+                        <div class="text-gray-600">Nejlepší cena Kč/g</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">20+</div>
+                        <div class="text-gray-600">Pojmů ve slovníku</div>
+                    </div>
+                </div>
+                
+                <!-- Top Products -->
+                <div class="bg-white rounded-lg shadow mb-8">
+                    <div class="px-6 py-4 border-b">
+                        <h2 class="text-2xl font-semibold">🏆 TOP 5 nejlevnějších proteinů</h2>
+                    </div>
+                    <div class="p-6">
+                        ${productsData
+                            .sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)
+                            .slice(0, 5)
+                            .map((product, index) => `
+                                <div class="flex items-center justify-between py-3 border-b last:border-b-0 hover:bg-gray-50 cursor-pointer" onclick="showProduct('${product.slug}')">
+                                    <div class="flex items-center gap-4">
+                                        <span class="text-2xl">${['🏆', '🥈', '🥉', '4️⃣', '5️⃣'][index]}</span>
+                                        <div>
+                                            <h3 class="font-semibold text-primary hover:underline">${product.name}</h3>
+                                            <div class="text-sm text-gray-600">${categoryNames[product.category]} • ${product.totalProtein}g proteinu</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-xl font-bold text-primary">${product.pricePerGramProtein.toFixed(2)} Kč</div>
+                                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-3">📊 Produkty podle kategorií</h3>
+                        <div class="space-y-2">
+                            ${Object.entries(categoryNames).map(([key, name]) => {
+                                const count = productsData.filter(p => p.category === key).length;
+                                const avgPrice = productsData.filter(p => p.category === key).reduce((sum, p) => sum + p.pricePerGramProtein, 0) / count || 0;
+                                return `
+                                    <a href="#" onclick="showCategory('${key}')" class="block text-primary hover:underline hover:bg-primary/5 p-2 rounded transition-colors">
+                                        <div class="flex justify-between items-center">
+                                            <span>${name}</span>
+                                            <span class="text-xs text-gray-500">${count} produktů • ${avgPrice.toFixed(1)} Kč/g</span>
+                                        </div>
+                                    </a>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-3">🍽️ Recepty s vysokým proteinem</h3>
+                        <div class="space-y-2">
+                            <a href="#" onclick="showRecipeCategory('breakfast')" class="block text-primary hover:underline">Proteinové snídaně</a>
+                            <a href="#" onclick="showRecipeCategory('lunch')" class="block text-primary hover:underline">Fitness obědy</a>
+                            <a href="#" onclick="showRecipeCategory('dinner')" class="block text-primary hover:underline">Zdravé večeře</a>
+                            <a href="#" onclick="showAllRecipes()" class="block text-primary hover:underline">Všechny recepty →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-3">🔧 Nástroje</h3>
+                        <div class="space-y-2">
+                            <a href="#" onclick="showCalculator()" class="block text-primary hover:underline">Protein kalkulačka</a>
+                            <a href="#" onclick="showDictionary()" class="block text-primary hover:underline">Slovník pojmů</a>
+                            <a href="#" onclick="showComparisons()" class="block text-primary hover:underline">Porovnání produktů</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Product detail page
+        function showProduct(slug) {
+            const product = productsData.find(p => p.slug === slug);
+            if (!product) return;
+            
+            updateSEO(
+                `${product.name} - Protein ${product.proteinPer100g}g/100g za ${product.pricePerGramProtein.toFixed(2)} Kč/g`,
+                `${product.name}: ${product.proteinPer100g}g proteinu na 100g, celkem ${product.totalProtein}g za ${product.price} Kč. Cena ${product.pricePerGramProtein.toFixed(2)} Kč za gram proteinu.`,
+                `${product.name}, protein, cena proteinu, ${categoryNames[product.category].toLowerCase()}, fitness potraviny`,
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": product.name,
+                    "description": `${product.name} obsahuje ${product.proteinPer100g}g proteinu na 100g`,
+                    "category": categoryNames[product.category],
+                    "offers": {
+                        "@type": "Offer",
+                        "price": product.price,
+                        "priceCurrency": "CZK"
+                    },
+                    "nutrition": {
+                        "@type": "NutritionInformation",
+                        "proteinContent": `${product.proteinPer100g}g`
+                    }
+                }
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Produkty', action: 'showAllProducts()'},
+                {name: categoryNames[product.category], action: `showCategory('${product.category}')`},
+                {name: product.name, action: `showProduct('${slug}')`}
+            ]);
+            
+            // Find similar products
+            const similarProducts = productsData
+                .filter(p => p.category === product.category && p.id !== product.id)
+                .sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)
+                .slice(0, 3);
+            
+            // Get ranking position
+            const allProductsByPrice = productsData.sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein);
+            const rankPosition = allProductsByPrice.findIndex(p => p.id === product.id) + 1;
+            
+            // Generate FAQ content
+            const faqContent = [
+                {
+                    question: `Kolik proteinu obsahuje ${product.name}?`,
+                    answer: `${product.name} obsahuje ${product.proteinPer100g}g proteinu na 100g produktu. V celém balení (${product.weight}g) je celkem ${product.totalProtein}g proteinu.`
+                },
+                {
+                    question: `Jaká je cena za gram proteinu u ${product.name}?`,
+                    answer: `Cena za gram proteinu u ${product.name} je ${product.pricePerGramProtein.toFixed(2)} Kč. To je ${rankPosition <= 10 ? 'velmi dobrá' : rankPosition <= 20 ? 'průměrná' : 'vyšší'} cena ve srovnání s ostatními produkty.`
+                },
+                {
+                    question: `Kde koupit ${product.name} nejlevněji?`,
+                    answer: `${product.name} za ${product.price} Kč najdete v běžných obchodech. Doporučujeme porovnat ceny v různých řetězcích pro nejlepší nabídku.`
+                },
+                {
+                    question: `Je ${product.name} vhodný pro fitness?`,
+                    answer: `Ano, ${product.name} s ${product.proteinPer100g}g proteinu na 100g je ${product.proteinPer100g >= 20 ? 'vynikajícím' : product.proteinPer100g >= 15 ? 'dobrým' : 'základním'} zdrojem bílkovin pro sportovce a fitness.`
+                }
+            ];
+            
+            const content = `
+                <!-- Product Header -->
+                <div class="bg-white rounded-lg shadow p-8 mb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <div class="mb-4">
+                                <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                    #${rankPosition} nejlevnější protein
+                                </span>
+                            </div>
+                            
+                            <h1 class="text-3xl font-bold text-gray-900 mb-4">${product.name}</h1>
+                            <p class="text-lg text-gray-600 mb-6">${product.description}</p>
+                            <div class="text-lg text-gray-600 mb-6">
+                                <span class="bg-gray-100 px-3 py-1 rounded">${categoryNames[product.category]}</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-green-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-green-600">${product.pricePerGramProtein.toFixed(2)} Kč</div>
+                                    <div class="text-sm text-green-700">za 1g proteinu</div>
+                                    <div class="text-xs text-green-600 mt-1">${rankPosition <= 5 ? '🏆 TOP 5' : rankPosition <= 10 ? '⭐ TOP 10' : '📊 Hodnocení'}</div>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-blue-600">${product.proteinPer100g}g</div>
+                                    <div class="text-sm text-blue-700">protein/100g</div>
+                                    <div class="text-xs text-blue-600 mt-1">${product.proteinPer100g >= 25 ? '💪 Vysoký' : product.proteinPer100g >= 15 ? '✓ Střední' : '📊 Základní'}</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-purple-600">${product.price} Kč</div>
+                                    <div class="text-sm text-purple-700">celková cena</div>
+                                    <div class="text-xs text-purple-600 mt-1">${(product.totalProtein / product.price).toFixed(1)}g/Kč</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-orange-600">${product.weight >= 1000 ? (product.weight/1000).toFixed(1) + 'kg' : product.weight + 'g'}</div>
+                                    <div class="text-sm text-orange-700">hmotnost</div>
+                                    <div class="text-xs text-orange-600 mt-1">${(product.weight / 100).toFixed(1)} porcí</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-semibold mb-4">📊 Detailní nutriční analýza</h2>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex justify-between mb-2">
+                                        <span>Celkem proteinu v balení:</span>
+                                        <span class="font-bold text-primary">${product.totalProtein}g</span>
+                                    </div>
+                                    <div class="flex justify-between mb-2">
+                                        <span>Počet porcí (100g):</span>
+                                        <span class="font-semibold">${(product.weight / 100).toFixed(1)}</span>
+                                    </div>
+                                    <div class="flex justify-between mb-2">
+                                        <span>Protein na korunu:</span>
+                                        <span class="font-semibold">${(product.totalProtein / product.price).toFixed(2)}g</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Pozice v žebříčku:</span>
+                                        <span class="font-bold text-primary">#${rankPosition} z ${productsData.length}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <h3 class="font-medium text-gray-900">🎯 Hodnocení efektivity</h3>
+                                    <div class="text-sm text-gray-600">
+                                        ${product.pricePerGramProtein <= 2 ? '🟢 Vynikající poměr cena/protein' : 
+                                          product.pricePerGramProtein <= 4 ? '🟡 Dobrý poměr cena/protein' : 
+                                          '🔴 Dražší zdroj proteinu'}
+                                    </div>
+                                    <div class="text-sm text-gray-600">
+                                        ${product.proteinPer100g >= 25 ? '💪 Vysokoproteinová potravina' : 
+                                          product.proteinPer100g >= 15 ? '✓ Střední obsah proteinu' : 
+                                          '📊 Základní zdroj proteinu'}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 space-y-3">
+                                <button onclick="showCategory('${product.category}')" class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors">
+                                    🔍 Porovnat s podobnými produkty
+                                </button>
+                                <button onclick="showComparison('${product.slug}', '${similarProducts[0]?.slug || ''}')" class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">
+                                    ⚖️ Porovnat s nejlevnějším
+                                </button>
+                                <button onclick="showCalculator()" class="w-full bg-gray-600 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors">
+                                    🧮 Spočítat denní potřebu
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">❓ Často kladené otázky o ${product.name}</h2>
+                    <div class="space-y-4">
+                        ${faqContent.map((faq, index) => `
+                            <div class="border-l-4 border-primary pl-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">${faq.question}</h3>
+                                <p class="text-gray-600">${faq.answer}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <!-- Usage Tips -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4">💡 Tipy pro využití ${product.name}</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-medium text-gray-900 mb-2">🍽️ Způsoby konzumace</h3>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                ${product.category === 'dairy' ? '<li>• Přímo jako svačina</li><li>• V smoothies a proteinových nápojích</li><li>• Do müsli a ovesných kaší</li>' : 
+                                  product.category === 'meat' ? '<li>• Grilování nebo pečení</li><li>• Do salátů a těstovin</li><li>• Jako hlavní jídlo s přílohou</li>' :
+                                  product.category === 'fish' ? '<li>• Pečení nebo grilování</li><li>• Do salátů a sushi</li><li>• S rýží nebo zeleninou</li>' :
+                                  product.category === 'legumes' ? '<li>• Vařené jako příloha</li><li>• Do polévek a ragú</li><li>• Namočené přes noc</li>' :
+                                  '<li>• Podle návodu na obalu</li><li>• Kombinace s jinými potravinami</li><li>• Různé způsoby přípravy</li>'}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900 mb-2">⏰ Ideální čas konzumace</h3>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                ${product.proteinPer100g >= 20 ? '<li>• Po tréninku (30-60 minut)</li><li>• Jako proteinová snídaně</li><li>• Mezi jídly jako svačina</li>' : 
+                                  '<li>• Kdykoli během dne</li><li>• Jako součást vyváženého jídla</li><li>• Kombinace s jinými proteiny</li>'}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                ${similarProducts.length > 0 ? `
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">🔗 Podobné produkty v kategorii "${categoryNames[product.category]}"</h2>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Porovnání s dalšími ${categoryNames[product.category].toLowerCase()} podle ceny za gram proteinu:
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        ${similarProducts.map((similar, index) => {
+                            const comparison = similar.pricePerGramProtein < product.pricePerGramProtein ? 'levnější' : similar.pricePerGramProtein > product.pricePerGramProtein ? 'dražší' : 'stejná cena';
+                            const savings = Math.abs(similar.pricePerGramProtein - product.pricePerGramProtein).toFixed(2);
+                            return `
+                                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="showProduct('${similar.slug}')">
+                                    <h3 class="font-semibold text-primary hover:underline mb-2">${similar.name}</h3>
+                                    <div class="text-sm text-gray-600 space-y-1">
+                                        <div>Protein: ${similar.proteinPer100g}g/100g</div>
+                                        <div>Cena: ${similar.price} Kč</div>
+                                        <div class="font-semibold ${similar.pricePerGramProtein < product.pricePerGramProtein ? 'text-green-600' : similar.pricePerGramProtein > product.pricePerGramProtein ? 'text-red-600' : 'text-gray-600'}">
+                                            ${similar.pricePerGramProtein.toFixed(2)} Kč/g
+                                            ${savings > 0 ? `(${savings} Kč ${comparison})` : ''}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                ` : ''}
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Enhanced Category page with SEO content
+        function showCategory(category) {
+            const categoryProducts = productsData
+                .filter(p => p.category === category)
+                .sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein);
+            
+            const avgPrice = categoryProducts.reduce((sum, p) => sum + p.pricePerGramProtein, 0) / categoryProducts.length;
+            const bestProduct = categoryProducts[0];
+            const highestProtein = categoryProducts.reduce((max, p) => p.proteinPer100g > max.proteinPer100g ? p : max, categoryProducts[0]);
+            
+            // Category-specific content
+            const categoryInfo = {
+                'dairy': {
+                    icon: '🥛',
+                    benefits: ['Kompletní aminokyselinový profil', 'Rychlé vstřebávání', 'Obsahuje vápník', 'Podpora kostí'],
+                    tips: ['Ideální po tréninku', 'Kombinujte s ovocem', 'Vybírejte varianty s nízkým tukem'],
+                    description: 'Mléčné výrobky jsou vynikajícím zdrojem kvalitních proteinů s kompletním aminokyselinovým profilem. Obsahují všechny esenciální aminokyseliny potřebné pro růst a regeneraci svalů.'
+                },
+                'meat': {
+                    icon: '🥩',
+                    benefits: ['Vysoký obsah proteinu', 'Kompletní aminokyseliny', 'Obsahuje železo a B vitamíny', 'Podpora svalové hmoty'],
+                    tips: ['Grilování nebo pečení', 'Kombinace se zeleninou', 'Bez přidaných tuků'],
+                    description: 'Maso je jedním z nejkvalitnějších zdrojů proteinu s vysokou biologickou hodnotou. Obsahuje všechny esenciální aminokyseliny ve správném poměru.'
+                },
+                'fish': {
+                    icon: '🐟',
+                    benefits: ['Vysoký obsah proteinu', 'Omega-3 mastné kyseliny', 'Nízký obsah tuku', 'Podpora zdraví srdce'],
+                    tips: ['Pečení nebo grilování', 'Minimální tepelná úprava', 'Kombinace s citrónem'],
+                    description: 'Ryby poskytují kvalitní protein s nízkým obsahem tuku a jsou bohaté na omega-3 mastné kyseliny, které podporují zdraví srdce a mozku.'
+                },
+                'legumes': {
+                    icon: '🌱',
+                    benefits: ['Vysoký obsah proteinu', 'Bohaté na vlákninu', 'Komplexní sacharidy', 'Minerály a vitamíny'],
+                    tips: ['Namočení přes noc', 'Kombinace s obilninami', 'Dlouhé vaření'],
+                    description: 'Luštěniny jsou výborným rostlinným zdrojem proteinu, vlákniny a komplexních sacharidů. Ideální pro vegetariány a vegany.'
+                },
+                'nuts': {
+                    icon: '🥜',
+                    benefits: ['Vysoký obsah proteinu', 'Zdravé tuky', 'Vitamín E', 'Minerály'],
+                    tips: ['Jako svačina', 'V müsli nebo smoothies', 'Pozor na vysokou kalorickou hodnotu'],
+                    description: 'Ořechy a semena kombinují protein se zdravými tuky a jsou bohaté na vitamíny a minerály. Ideální jako svačina nebo doplněk jídel.'
+                },
+                'supplements': {
+                    icon: '💊',
+                    benefits: ['Koncentrovaný protein', 'Rychlé vstřebávání', 'Přesné dávkování', 'Dlouhá trvanlivost'],
+                    tips: ['Po tréninku', 'Podle návodu', 'Kombinace s vodou nebo mlékem'],
+                    description: 'Proteinové doplňky poskytují koncentrovaný protein s vysokou biologickou hodnotou. Ideální pro sportovce a aktivní jedince.'
+                },
+                'other': {
+                    icon: '🍽️',
+                    benefits: ['Rozmanitost živin', 'Různé aminokyseliny', 'Přírodní zdroje', 'Pestrost stravy'],
+                    tips: ['Kombinujte s jinými proteiny', 'Různé způsoby přípravy', 'Součást vyvážené stravy'],
+                    description: 'Ostatní proteinové potraviny poskytují rozmanitost ve stravě a různé kombinace živin pro optimální výživu.'
+                }
+            };
+            
+            const info = categoryInfo[category] || categoryInfo['other'];
+            
+            updateSEO(
+                `${categoryNames[category]} s vysokým obsahem proteinu - nejlevnější za ${bestProduct?.pricePerGramProtein.toFixed(2)} Kč/g`,
+                `Nejlevnější ${categoryNames[category].toLowerCase()} s vysokým obsahem bílkovin. Porovnání ${categoryProducts.length} produktů podle ceny za gram proteinu. Průměrná cena ${avgPrice.toFixed(2)} Kč/g.`,
+                `${categoryNames[category].toLowerCase()}, protein, nejlevnější ${categoryNames[category].toLowerCase()}, cena proteinu, fitness potraviny`
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Produkty', action: 'showAllProducts()'},
+                {name: categoryNames[category], action: `showCategory('${category}')`}
+            ]);
+            
+            const content = `
+                <!-- Category Header -->
+                <div class="bg-white rounded-lg shadow p-8 mb-8">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">${info.icon}</div>
+                        <h1 class="text-4xl font-bold text-gray-900 mb-4">${categoryNames[category]} s vysokým obsahem proteinu</h1>
+                        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                            ${info.description}
+                        </p>
+                    </div>
+                    
+                    <!-- Category Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-green-600">${categoryProducts.length}</div>
+                            <div class="text-sm text-green-700">produktů v kategorii</div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-blue-600">${bestProduct?.pricePerGramProtein.toFixed(2)} Kč</div>
+                            <div class="text-sm text-blue-700">nejlevnější za 1g</div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-purple-600">${avgPrice.toFixed(2)} Kč</div>
+                            <div class="text-sm text-purple-700">průměrná cena/g</div>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-orange-600">${highestProtein?.proteinPer100g}g</div>
+                            <div class="text-sm text-orange-700">nejvíce proteinu/100g</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category Benefits -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-semibold mb-4">💪 Výhody ${categoryNames[category].toLowerCase()}</h2>
+                        <ul class="space-y-2">
+                            ${info.benefits.map(benefit => `
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 mt-1">✓</span>
+                                    <span class="text-gray-700">${benefit}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-semibold mb-4">🎯 Tipy pro přípravu</h2>
+                        <ul class="space-y-2">
+                            ${info.tips.map(tip => `
+                                <li class="flex items-start gap-2">
+                                    <span class="text-primary mt-1">•</span>
+                                    <span class="text-gray-700">${tip}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- TOP 3 Products -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4">🏆 TOP 3 nejlevnější ${categoryNames[category].toLowerCase()}</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        ${categoryProducts.slice(0, 3).map((product, index) => `
+                            <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="showProduct('${product.slug}')">
+                                <div class="text-center mb-3">
+                                    <span class="text-3xl">${['🏆', '🥈', '🥉'][index]}</span>
+                                </div>
+                                <h3 class="font-semibold text-primary hover:underline mb-2 text-center">${product.name}</h3>
+                                <div class="text-center space-y-1">
+                                    <div class="text-2xl font-bold text-primary">${product.pricePerGramProtein.toFixed(2)} Kč/g</div>
+                                    <div class="text-sm text-gray-600">${product.proteinPer100g}g protein/100g</div>
+                                    <div class="text-sm text-gray-600">${product.price} Kč</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <!-- All Products List -->
+                <div class="bg-white rounded-lg shadow">
+                    <div class="px-6 py-4 border-b">
+                        <h2 class="text-xl font-semibold">📊 Všechny ${categoryNames[category].toLowerCase()} seřazené podle ceny</h2>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Kompletní přehled ${categoryProducts.length} produktů s detailním porovnáním cen za gram proteinu
+                        </p>
+                    </div>
+                    <div class="divide-y divide-gray-100">
+                        ${categoryProducts.map((product, index) => `
+                            <div class="p-4 hover:bg-gray-50 transition-colors cursor-pointer" onclick="showProduct('${product.slug}')">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-4">
+                                        <div class="text-center">
+                                            <div class="text-xl">${index < 3 ? ['🏆', '🥈', '🥉'][index] : `#${index + 1}`}</div>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-primary hover:underline">${product.name}</h3>
+                                            <div class="text-sm text-gray-600">
+                                                ${product.price} Kč • ${product.weight >= 1000 ? (product.weight/1000).toFixed(1) + ' kg' : product.weight + ' g'} • 
+                                                ${product.proteinPer100g}g protein/100g • Celkem: ${product.totalProtein}g proteinu
+                                            </div>
+                                            <div class="text-xs text-gray-500 mt-1">
+                                                ${product.pricePerGramProtein < avgPrice ? '💚 Pod průměrem' : product.pricePerGramProtein > avgPrice ? '🔴 Nad průměrem' : '⚖️ Průměrná cena'}
+                                                • Protein na korunu: ${product.proteinPerCrown}g
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-2xl font-bold text-primary">${product.pricePerGramProtein.toFixed(2)} Kč</div>
+                                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                                        <div class="text-xs mt-1 ${product.pricePerGramProtein < avgPrice ? 'text-green-600' : product.pricePerGramProtein > avgPrice ? 'text-red-600' : 'text-gray-600'}">
+                                            ${(((product.pricePerGramProtein - avgPrice) / avgPrice) * 100).toFixed(0)}% od průměru
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <!-- Category FAQ -->
+                <div class="bg-white rounded-lg shadow p-6 mt-8">
+                    <h2 class="text-xl font-semibold mb-4">❓ Často kladené otázky o ${categoryNames[category].toLowerCase()}</h2>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Které ${categoryNames[category].toLowerCase()} mají nejvíce proteinu?</h3>
+                            <p class="text-gray-600">${highestProtein.name} obsahuje nejvíce proteinu s ${highestProtein.proteinPer100g}g na 100g produktu.</p>
+                        </div>
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Které ${categoryNames[category].toLowerCase()} jsou nejlevnější?</h3>
+                            <p class="text-gray-600">${bestProduct.name} má nejlepší poměr cena/protein s ${bestProduct.pricePerGramProtein.toFixed(2)} Kč za gram proteinu.</p>
+                        </div>
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Jaká je průměrná cena proteinu v této kategorii?</h3>
+                            <p class="text-gray-600">Průměrná cena za gram proteinu v kategorii ${categoryNames[category].toLowerCase()} je ${avgPrice.toFixed(2)} Kč.</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Show all products
+        function showAllProducts() {
+            updateSEO(
+                'Všechny proteinové potraviny - databáze 45+ produktů s cenami',
+                'Kompletní databáze proteinových potravin s porovnáním cen za gram proteinu. Mléčné výrobky, maso, ryby, luštěniny a doplňky stravy.',
+                'proteinové potraviny, databáze potravin, cena proteinu, nejlevnější protein'
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Produkty', action: 'showAllProducts()'}
+            ]);
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Všechny proteinové potraviny</h1>
+                    <p class="text-xl text-gray-600">
+                        Databáze ${productsData.length} produktů seřazených podle nejlepšího poměru cena/protein. 
+                        Najděte nejlevnější zdroje bílkovin pro vaši stravu.
+                    </p>
+                </div>
+                
+                <!-- Categories -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+                    ${Object.entries(categoryNames).map(([key, name]) => {
+                        const count = productsData.filter(p => p.category === key).length;
+                        const categoryIcons = {
+                            'dairy': '🥛', 'meat': '🥩', 'fish': '🐟', 
+                            'legumes': '🌱', 'nuts': '🥜', 'supplements': '💊', 'other': '🍽️'
+                        };
+                        return `
+                            <div class="bg-white p-4 rounded-lg shadow text-center cursor-pointer hover:bg-primary/5 transition-colors" onclick="showCategory('${key}')">
+                                <div class="text-2xl mb-2">${categoryIcons[key] || '🍽️'}</div>
+                                <div class="text-sm font-medium">${name}</div>
+                                <div class="text-xs text-gray-500">${count} produktů</div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <!-- All products list -->
+                <div class="bg-white rounded-lg shadow">
+                    <div class="px-6 py-4 border-b">
+                        <h2 class="text-xl font-semibold">Všechny produkty seřazené podle ceny</h2>
+                    </div>
+                    <div class="divide-y divide-gray-100">
+                        ${productsData
+                            .sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)
+                            .map((product, index) => `
+                                <div class="p-4 hover:bg-gray-50 transition-colors cursor-pointer" onclick="showProduct('${product.slug}')">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="text-center">
+                                                <div class="text-xl">${index < 3 ? ['🏆', '🥈', '🥉'][index] : `#${index + 1}`}</div>
+                                            </div>
+                                            <div>
+                                                <h3 class="font-semibold text-primary hover:underline">${product.name}</h3>
+                                                <div class="text-sm text-gray-600">
+                                                    <span class="bg-gray-100 px-2 py-1 rounded text-xs">${categoryNames[product.category]}</span>
+                                                    <span class="ml-2">${product.price} Kč • ${product.weight >= 1000 ? (product.weight/1000).toFixed(1) + ' kg' : product.weight + ' g'}</span>
+                                                    <span class="mx-1">•</span>
+                                                    <span>${product.proteinPer100g}g protein/100g</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-2xl font-bold text-primary">${product.pricePerGramProtein.toFixed(2)} Kč</div>
+                                            <div class="text-xs text-gray-500">za 1g proteinu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Recipe functions
+        function showAllRecipes() {
+            updateSEO(
+                'Recepty s vysokým obsahem proteinu - fitness kuchařka',
+                `${recipesData.length} receptů s vysokým obsahem bílkovin. Proteinové snídaně, obědy, večeře a svačiny pro fitness a zdravý životní styl.`,
+                'proteinové recepty, fitness recepty, recepty s vysokým proteinem, zdravé recepty'
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Recepty', action: 'showAllRecipes()'}
+            ]);
+            
+            const categoryNames = {
+                'breakfast': 'Snídaně',
+                'lunch': 'Obědy',
+                'dinner': 'Večeře',
+                'snacks': 'Svačiny',
+                'beverages': 'Nápoje'
+            };
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Recepty s vysokým obsahem proteinu</h1>
+                    <p class="text-xl text-gray-600">
+                        Kuchařka ${recipesData.length} receptů s vysokým obsahem bílkovin. 
+                        Od proteinových snídaní po fitness večeře s detailními nutričními informacemi.
+                    </p>
+                </div>
+                
+                <!-- Recipe Categories -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                    ${Object.entries(categoryNames).map(([key, name]) => {
+                        const count = recipesData.filter(r => r.category === key).length;
+                        const avgProtein = recipesData.filter(r => r.category === key)
+                            .reduce((sum, r) => sum + r.protein, 0) / count || 0;
+                        const categoryIcons = {
+                            'breakfast': '🍳', 'lunch': '🍲', 'dinner': '🍽️', 
+                            'snacks': '🍎', 'beverages': '🥤'
+                        };
+                        return `
+                            <div class="bg-white p-4 rounded-lg shadow text-center cursor-pointer hover:bg-primary/5 transition-colors" onclick="showRecipeCategory('${key}')">
+                                <div class="text-3xl mb-2">${categoryIcons[key] || '🍽️'}</div>
+                                <div class="font-medium">${name}</div>
+                                <div class="text-xs text-gray-500">${count} receptů</div>
+                                <div class="text-xs text-primary">${avgProtein.toFixed(1)}g protein</div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <!-- Recipe Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${recipesData.map(recipe => {
+                        const difficultyColors = {
+                            'easy': 'text-green-600 bg-green-100',
+                            'medium': 'text-yellow-600 bg-yellow-100', 
+                            'hard': 'text-red-600 bg-red-100'
+                        };
+                        const difficultyText = {
+                            'easy': 'Snadné',
+                            'medium': 'Střední',
+                            'hard': 'Náročné'
+                        };
+                        
+                        return `
+                            <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" onclick="showRecipe('${recipe.slug}')">
+                                <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                                    <div class="flex items-center justify-center text-4xl">
+                                        ${recipe.category === 'breakfast' ? '🍳' : 
+                                          recipe.category === 'lunch' ? '🍲' : 
+                                          recipe.category === 'dinner' ? '🍽️' : 
+                                          recipe.category === 'beverages' ? '🥤' : '🍽️'}
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="text-lg font-semibold text-primary hover:underline">${recipe.title}</h3>
+                                        <span class="px-2 py-1 text-xs rounded ${difficultyColors[recipe.difficulty]}">
+                                            ${difficultyText[recipe.difficulty]}
+                                        </span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4 text-sm">${recipe.description}</p>
+                                    
+                                    <div class="grid grid-cols-3 gap-4 text-sm text-gray-500 mb-4">
+                                        <div class="text-center">
+                                            <div class="font-semibold text-primary">⏱️ ${recipe.totalTime} min</div>
+                                            <div class="text-xs">celkový čas</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="font-semibold text-purple-600">🍽️ ${recipe.servings} porcí</div>
+                                            <div class="text-xs">počet porcí</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="font-semibold text-green-600">💪 ${recipe.protein}g</div>
+                                            <div class="text-xs">protein celkem</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center text-xs">
+                                        <span class="bg-gray-100 px-2 py-1 rounded">${categoryNames[recipe.category]}</span>
+                                        <span class="text-orange-600 font-medium">${recipe.calories} kcal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Individual recipe page with Schema.org markup
+        function showRecipe(slug) {
+            const recipe = recipesData.find(r => r.slug === slug);
+            if (!recipe) return;
+            
+            const categoryNames = {
+                'breakfast': 'Snídaně',
+                'lunch': 'Obědy',
+                'dinner': 'Večeře',
+                'snacks': 'Svačiny',
+                'beverages': 'Nápoje'
+            };
+            
+            // Generate Schema.org Recipe markup
+            const schemaMarkup = {
+                "@context": "https://schema.org",
+                "@type": "Recipe",
+                "name": recipe.title,
+                "description": recipe.description,
+                "image": recipe.image || 'https://example.com/recipe-default.jpg',
+                "author": {
+                    "@type": "Organization",
+                    "name": "Protein Hunter"
+                },
+                "recipeCategory": categoryNames[recipe.category],
+                "recipeCuisine": "Česká",
+                "prepTime": `PT${recipe.prepTime}M`,
+                "cookTime": `PT${recipe.cookTime}M`,
+                "totalTime": `PT${recipe.totalTime}M`,
+                "recipeYield": recipe.servings,
+                "nutrition": {
+                    "@type": "NutritionInformation",
+                    "calories": `${recipe.calories} kcal`,
+                    "proteinContent": `${recipe.protein}g`,
+                    "servingSize": "1 porce"
+                },
+                "recipeIngredient": recipe.ingredients.map(ing => 
+                    `${ing.amount} ${ing.unit} ${ing.name}`
+                ),
+                "recipeInstructions": recipe.instructions.map((step, index) => ({
+                    "@type": "HowToStep",
+                    "text": step,
+                    "position": index + 1
+                })),
+                "keywords": recipe.seoKeywords.join(', ')
+            };
+            
+            updateSEO(
+                `${recipe.title} - recept s ${recipe.protein}g proteinu`,
+                `${recipe.description} Kompletní recept s nutričními hodnotami: ${recipe.protein}g proteinu, ${recipe.calories} kcal, ${recipe.totalTime} minut přípravy.`,
+                recipe.seoKeywords.join(', '),
+                schemaMarkup
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Recepty', action: 'showAllRecipes()'},
+                {name: categoryNames[recipe.category], action: `showRecipeCategory('${recipe.category}')`},
+                {name: recipe.title, action: `showRecipe('${slug}')`}
+            ]);
+            
+            const proteinPerServing = (recipe.protein / recipe.servings).toFixed(1);
+            const caloriesPerServing = (recipe.calories / recipe.servings).toFixed(0);
+            
+            const content = `
+                <div class="bg-white rounded-lg shadow p-8 mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">${recipe.title}</h1>
+                    <p class="text-lg text-gray-600 mb-6">${recipe.description}</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-green-600">${recipe.protein}g</div>
+                            <div class="text-sm text-green-700">protein celkem</div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-blue-600">${recipe.totalTime} min</div>
+                            <div class="text-sm text-blue-700">celkový čas</div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-purple-600">${recipe.servings}</div>
+                            <div class="text-sm text-purple-700">porcí</div>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-orange-600">${recipe.calories}</div>
+                            <div class="text-sm text-orange-700">kcal celkem</div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-xl font-semibold mb-4">Ingredience</h2>
+                    <div class="space-y-2 mb-6">
+                        ${recipe.ingredients.map(ing => `
+                            <div class="flex justify-between p-2 border rounded">
+                                <span>${ing.name}</span>
+                                <span class="font-medium">${ing.amount} ${ing.unit}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <h2 class="text-xl font-semibold mb-4">Postup</h2>
+                    <ol class="space-y-3">
+                        ${recipe.instructions.map((step, index) => `
+                            <li class="flex gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">${index + 1}</span>
+                                <span>${step}</span>
+                            </li>
+                        `).join('')}
+                    </ol>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        function showRecipeCategory(category) {
+            const categoryNames = {
+                'breakfast': 'Snídaně',
+                'lunch': 'Obědy', 
+                'dinner': 'Večeře',
+                'snacks': 'Svačiny',
+                'beverages': 'Nápoje'
+            };
+            
+            updateSEO(
+                `Proteinové ${categoryNames[category].toLowerCase()} - recepty s vysokým proteinem`,
+                `Recepty na ${categoryNames[category].toLowerCase()} s vysokým obsahem bílkovin. Fitness recepty pro zdravý životní styl.`,
+                `proteinové ${categoryNames[category].toLowerCase()}, fitness ${categoryNames[category].toLowerCase()}, recepty s proteinem`
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Recepty', action: 'showAllRecipes()'},
+                {name: categoryNames[category], action: `showRecipeCategory('${category}')`}
+            ]);
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Proteinové ${categoryNames[category].toLowerCase()}</h1>
+                    <p class="text-xl text-gray-600">
+                        Recepty na ${categoryNames[category].toLowerCase()} s vysokým obsahem bílkovin pro fitness a zdravý životní styl.
+                    </p>
+                </div>
+                
+                <div class="text-center py-12">
+                    <p class="text-gray-500">Recepty pro kategorii "${categoryNames[category]}" budou brzy dostupné.</p>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Dictionary
+        function showDictionary() {
+            updateSEO(
+                'Slovník proteinových pojmů - kompletní průvodce bílkovinami',
+                'Vysvětlení 20+ pojmů z oblasti proteinů a výživy. Aminokyseliny, BCAA, whey protein, biologická hodnota a další.',
+                'slovník proteinů, aminokyseliny, BCAA, whey protein, biologická hodnota, výživa'
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Slovník', action: 'showDictionary()'}
+            ]);
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Slovník proteinových pojmů</h1>
+                    <p class="text-xl text-gray-600">
+                        Kompletní průvodce světem proteinů a výživy. Vysvětlení odborných pojmů srozumitelně.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Protein</h3>
+                        <p class="text-gray-600 text-sm">Makronutrient složený z aminokyselin, nezbytný pro stavbu a obnovu tkání...</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-semibold text-primary mb-2">BCAA</h3>
+                        <p class="text-gray-600 text-sm">Větvené aminokyseliny důležité pro regeneraci svalů...</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Whey protein</h3>
+                        <p class="text-gray-600 text-sm">Syrovátkový protein, rychle se vstřebává...</p>
+                    </div>
+                    
+                    <!-- More dictionary entries would be loaded from data -->
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Calculator
+        function showCalculator() {
+            updateSEO(
+                'Protein kalkulačka - vypočítejte svou potřebu bílkovin',
+                'Kalkulačka denní potřeby proteinů podle věku, hmotnosti a aktivity. Personalizované doporučení pro sport a fitness.',
+                'protein kalkulačka, potřeba proteinu, denní dávka proteinu, fitness kalkulačka'
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Kalkulačka', action: 'showCalculator()'}
+            ]);
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Protein kalkulačka</h1>
+                    <p class="text-xl text-gray-600">
+                        Vypočítejte svou denní potřebu bílkovin podle věku, hmotnosti a aktivity.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-8 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Hmotnost (kg)</label>
+                            <input type="number" id="weight" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="70">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Aktivita</label>
+                            <select id="activity" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="1.2">Sedavý způsob života</option>
+                                <option value="1.6">Rekreační sport</option>
+                                <option value="2.0">Intenzivní trénink</option>
+                                <option value="2.4">Profesionální sport</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button onclick="calculateProtein()" class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors mb-6">
+                        Vypočítat potřebu
+                    </button>
+                    
+                    <div id="result" class="text-center">
+                        <p class="text-gray-500">Zadejte své údaje pro výpočet denní potřeby proteinu.</p>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        function calculateProtein() {
+            const weight = document.getElementById('weight').value;
+            const activity = document.getElementById('activity').value;
+            
+            if (!weight) {
+                alert('Zadejte prosím svou hmotnost');
+                return;
+            }
+            
+            const dailyProtein = Math.round(weight * activity);
+            const result = document.getElementById('result');
+            
+            result.innerHTML = `
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">${dailyProtein}g</h3>
+                    <p class="text-green-700">Doporučená denní dávka proteinu</p>
+                    <div class="mt-4 text-sm text-green-600">
+                        To je například ${Math.round(dailyProtein / 25)} porcí tvarohu nebo ${Math.round(dailyProtein / 23)} porcí kuřecího masa.
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Enhanced Comparisons homepage
+        function showComparisons() {
+            updateSEO(
+                'Porovnání proteinových potravin - najděte nejlepší poměr cena/výkon',
+                'Detailní porovnání proteinových potravin podle ceny za gram proteinu. Interaktivní nástroj pro výběr nejlepších zdrojů bílkovin.',
+                'porovnání proteinů, cena proteinu, nejlevnější protein, protein kalkulka'
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Porovnání', action: 'showComparisons()'}
+            ]);
+            
+            // Generate popular comparisons
+            const popularComparisons = [
+                { name: 'Nejlevnější vs Nejdražší', 
+                  products: [productsData.sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0],
+                            productsData.sort((a, b) => b.pricePerGramProtein - a.pricePerGramProtein)[0]] },
+                { name: 'Tvaroh vs Cottage cheese',
+                  products: [productsData.find(p => p.name.includes('Tvaroh')),
+                            productsData.find(p => p.name.includes('Cottage'))] },
+                { name: 'Kuřecí vs Krůtí',
+                  products: [productsData.find(p => p.name.includes('Kuřecí')),
+                            productsData.find(p => p.name.includes('Krůtí'))] },
+                { name: 'Whey vs Rostlinné',
+                  products: [productsData.find(p => p.name.includes('Whey')),
+                            productsData.find(p => p.category === 'legumes')] },
+                { name: 'Vejce vs Ryby',
+                  products: [productsData.find(p => p.name.includes('Vejce')),
+                            productsData.find(p => p.category === 'fish')] },
+                { name: 'Mléčné vs Maso',
+                  products: [productsData.filter(p => p.category === 'dairy').sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0],
+                            productsData.filter(p => p.category === 'meat').sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0]] }
+            ].filter(comp => comp.products[0] && comp.products[1]);
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Porovnání proteinových potravin</h1>
+                    <p class="text-xl text-gray-600">
+                        Detailní porovnání produktů podle ceny za gram proteinu, nutričních hodnot a efektivity. 
+                        Najděte nejlepší volbu pro vaši stravu a budžet.
+                    </p>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-semibold mb-4">⚡ Rychlé porovnání</h2>
+                        <p class="text-gray-600 mb-4">Vyberte si z předpřipravených porovnání:</p>
+                        <button onclick="showComparisonSelector()" class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors">
+                            🎯 Vybrat produkty k porovnání
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-semibold mb-4">📊 Kategoriální porovnání</h2>
+                        <p class="text-gray-600 mb-4">Porovnejte nejlepší produkty z různých kategorií:</p>
+                        <div class="grid grid-cols-2 gap-2">
+                            ${Object.entries(categoryNames).slice(0, 4).map(([key, name]) => `
+                                <button onclick="showCategory('${key}')" class="text-sm bg-gray-100 hover:bg-primary hover:text-white transition-colors py-2 px-3 rounded">
+                                    ${name}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Popular Comparisons -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4">🔥 Nejpopulárnější porovnání</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${popularComparisons.map(comp => {
+                            const [p1, p2] = comp.products;
+                            const winner = p1.pricePerGramProtein < p2.pricePerGramProtein ? p1 : p2;
+                            const savings = Math.abs(p1.pricePerGramProtein - p2.pricePerGramProtein);
+                            const savingsPercent = (savings / Math.max(p1.pricePerGramProtein, p2.pricePerGramProtein) * 100).toFixed(0);
+                            
+                            return `
+                                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" 
+                                     onclick="showComparison('${p1.slug}', '${p2.slug}')">
+                                    <h3 class="font-semibold text-primary mb-3">${comp.name}</h3>
+                                    <div class="text-sm space-y-2">
+                                        <div class="flex justify-between items-center">
+                                            <span class="truncate">${p1.name.slice(0, 15)}...</span>
+                                            <span class="font-bold text-blue-600">${p1.pricePerGramProtein.toFixed(2)} Kč/g</span>
+                                        </div>
+                                        <div class="text-center text-gray-400 text-xs">vs</div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="truncate">${p2.name.slice(0, 15)}...</span>
+                                            <span class="font-bold text-purple-600">${p2.pricePerGramProtein.toFixed(2)} Kč/g</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 p-2 bg-green-50 rounded text-center">
+                                        <div class="text-sm font-bold text-green-700">🏆 ${winner.name.slice(0, 20)}...</div>
+                                        <div class="text-xs text-green-600">${savingsPercent}% levnější</div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                
+                <!-- Comparison Categories -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">📊 Porovnání podle kategorií</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        ${Object.entries(categoryNames).map(([key, name]) => {
+                            const categoryProducts = productsData.filter(p => p.category === key);
+                            const bestProduct = categoryProducts.sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0];
+                            const avgPrice = categoryProducts.reduce((sum, p) => sum + p.pricePerGramProtein, 0) / categoryProducts.length;
+                            
+                            const categoryIcons = {
+                                'dairy': '🥛', 'meat': '🥩', 'fish': '🐟', 
+                                'legumes': '🌱', 'nuts': '🥜', 'supplements': '💊', 'other': '🍽️'
+                            };
+                            
+                            return `
+                                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="showCategory('${key}')">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">${categoryIcons[key] || '🍽️'}</div>
+                                        <h3 class="font-semibold text-primary mb-2">${name}</h3>
+                                        <div class="text-sm text-gray-600 space-y-1">
+                                            <div>${categoryProducts.length} produktů</div>
+                                            <div class="font-bold text-green-600">Od ${bestProduct?.pricePerGramProtein.toFixed(2)} Kč/g</div>
+                                            <div class="text-xs">Průměr: ${avgPrice.toFixed(2)} Kč/g</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        function showComparison(product1Slug, product2Slug) {
+            const product1 = productsData.find(p => p.slug === product1Slug);
+            const product2 = productsData.find(p => p.slug === product2Slug);
+            
+            if (!product1 || !product2) {
+                // Show comparison selector if products not found
+                showComparisonSelector();
+                return;
+            }
+            
+            const winner = product1.pricePerGramProtein < product2.pricePerGramProtein ? product1 : product2;
+            const savings = Math.abs(product1.pricePerGramProtein - product2.pricePerGramProtein);
+            const savingsPercent = (savings / Math.max(product1.pricePerGramProtein, product2.pricePerGramProtein) * 100).toFixed(1);
+            
+            updateSEO(
+                `${product1.name} vs ${product2.name} - porovnání proteinu a ceny`,
+                `Detailní porovnání ${product1.name} (${product1.pricePerGramProtein.toFixed(2)} Kč/g) vs ${product2.name} (${product2.pricePerGramProtein.toFixed(2)} Kč/g). ${winner.name} je levnější o ${savingsPercent}%.`,
+                `${product1.name} vs ${product2.name}, porovnání proteinů, cena proteinu, který je lepší`,
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": `Porovnání: ${product1.name} vs ${product2.name}`,
+                    "description": `Porovnání ceny za gram proteinu mezi ${product1.name} a ${product2.name}`
+                }
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Porovnání', action: 'showComparisons()'},
+                {name: `${product1.name} vs ${product2.name}`, action: `showComparison('${product1Slug}', '${product2Slug}')`}
+            ]);
+            
+            const comparisonMetrics = [
+                {
+                    name: 'Cena za gram proteinu',
+                    unit: 'Kč/g',
+                    product1: product1.pricePerGramProtein.toFixed(2),
+                    product2: product2.pricePerGramProtein.toFixed(2),
+                    winner: product1.pricePerGramProtein < product2.pricePerGramProtein ? 1 : 2,
+                    difference: savings.toFixed(2)
+                },
+                {
+                    name: 'Protein na 100g',
+                    unit: 'g',
+                    product1: product1.proteinPer100g,
+                    product2: product2.proteinPer100g,
+                    winner: product1.proteinPer100g > product2.proteinPer100g ? 1 : 2,
+                    difference: Math.abs(product1.proteinPer100g - product2.proteinPer100g).toFixed(1)
+                },
+                {
+                    name: 'Celková cena',
+                    unit: 'Kč',
+                    product1: product1.price,
+                    product2: product2.price,
+                    winner: product1.price < product2.price ? 1 : 2,
+                    difference: Math.abs(product1.price - product2.price).toFixed(0)
+                },
+                {
+                    name: 'Celkem proteinu',
+                    unit: 'g',
+                    product1: product1.totalProtein,
+                    product2: product2.totalProtein,
+                    winner: product1.totalProtein > product2.totalProtein ? 1 : 2,
+                    difference: Math.abs(product1.totalProtein - product2.totalProtein).toFixed(1)
+                },
+                {
+                    name: 'Protein na korunu',
+                    unit: 'g/Kč',
+                    product1: product1.proteinPerCrown,
+                    product2: product2.proteinPerCrown,
+                    winner: product1.proteinPerCrown > product2.proteinPerCrown ? 1 : 2,
+                    difference: Math.abs(product1.proteinPerCrown - product2.proteinPerCrown).toFixed(2)
+                }
+            ];
+            
+            const product1Wins = comparisonMetrics.filter(m => m.winner === 1).length;
+            const product2Wins = comparisonMetrics.filter(m => m.winner === 2).length;
+            const overallWinner = product1Wins > product2Wins ? product1 : product2;
+            
+            const content = `
+                <!-- Comparison Header -->
+                <div class="bg-white rounded-lg shadow p-8 mb-8">
+                    <div class="text-center mb-6">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4">${product1.name} vs ${product2.name}</h1>
+                        <p class="text-xl text-gray-600">Detailní porovnání ceny za gram proteinu a nutričních hodnot</p>
+                    </div>
+                    
+                    <!-- Winner Banner -->
+                    <div class="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg p-6 mb-6">
+                        <div class="text-center">
+                            <h2 class="text-2xl font-bold text-green-800 mb-2">🏆 Vítěz porovnání</h2>
+                            <div class="text-3xl font-bold text-green-600">${overallWinner.name}</div>
+                            <div class="text-green-700 mt-2">
+                                Vítězí v ${overallWinner === product1 ? product1Wins : product2Wins} z ${comparisonMetrics.length} kategorií
+                            </div>
+                            <div class="text-sm text-green-600 mt-1">
+                                ${overallWinner.pricePerGramProtein.toFixed(2)} Kč za gram proteinu
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Overview -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="text-center">
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h3 class="text-xl font-bold text-blue-800 mb-4">${product1.name}</h3>
+                                <div class="text-3xl font-bold text-blue-600 mb-2">${product1.pricePerGramProtein.toFixed(2)} Kč/g</div>
+                                <div class="text-blue-700">${categoryNames[product1.category]}</div>
+                                <div class="mt-4 space-y-2 text-sm">
+                                    <div>Cena: ${product1.price} Kč</div>
+                                    <div>Hmotnost: ${product1.weight >= 1000 ? (product1.weight/1000).toFixed(1) + ' kg' : product1.weight + ' g'}</div>
+                                    <div>Protein: ${product1.proteinPer100g}g/100g</div>
+                                    <div>Celkem: ${product1.totalProtein}g proteinu</div>
+                                </div>
+                                <button onclick="showProduct('${product1.slug}')" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                                    🔍 Detail produktu
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-purple-50 rounded-lg p-6">
+                                <h3 class="text-xl font-bold text-purple-800 mb-4">${product2.name}</h3>
+                                <div class="text-3xl font-bold text-purple-600 mb-2">${product2.pricePerGramProtein.toFixed(2)} Kč/g</div>
+                                <div class="text-purple-700">${categoryNames[product2.category]}</div>
+                                <div class="mt-4 space-y-2 text-sm">
+                                    <div>Cena: ${product2.price} Kč</div>
+                                    <div>Hmotnost: ${product2.weight >= 1000 ? (product2.weight/1000).toFixed(1) + ' kg' : product2.weight + ' g'}</div>
+                                    <div>Protein: ${product2.proteinPer100g}g/100g</div>
+                                    <div>Celkem: ${product2.totalProtein}g proteinu</div>
+                                </div>
+                                <button onclick="showProduct('${product2.slug}')" class="mt-4 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">
+                                    🔍 Detail produktu
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Comparison Table -->
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+                    <div class="px-6 py-4 bg-gray-50 border-b">
+                        <h2 class="text-xl font-semibold">📊 Detailní porovnání</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metrika</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">${product1.name}</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">${product2.name}</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Rozdíl</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vítěz</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                ${comparisonMetrics.map(metric => `
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">${metric.name}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-center ${
+                                            metric.winner === 1 ? 'bg-green-50 text-green-800 font-bold' : 'text-gray-600'
+                                        }">
+                                            ${metric.product1} ${metric.unit}
+                                            ${metric.winner === 1 ? ' 🏆' : ''}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-center ${
+                                            metric.winner === 2 ? 'bg-green-50 text-green-800 font-bold' : 'text-gray-600'
+                                        }">
+                                            ${metric.product2} ${metric.unit}
+                                            ${metric.winner === 2 ? ' 🏆' : ''}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-600">
+                                            ${metric.difference} ${metric.unit}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-center">
+                                            <span class="text-2xl">${metric.winner === 1 ? '🔵' : '🟣'}</span>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Savings Calculator -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4">💰 Kalkulace úspor</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-4 bg-yellow-50 rounded-lg">
+                            <div class="text-2xl font-bold text-yellow-600">${savingsPercent}%</div>
+                            <div class="text-yellow-700 text-sm">úspora za gram proteinu</div>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <div class="text-2xl font-bold text-green-600">${savings.toFixed(2)} Kč</div>
+                            <div class="text-green-700 text-sm">rozdíl za gram proteinu</div>
+                        </div>
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">${(savings * 30).toFixed(0)} Kč</div>
+                            <div class="text-blue-700 text-sm">úspora za 30g proteinu (denní dávka)</div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-700">
+                            <strong>Výpočet:</strong> Pokud byste denno konzumovali 30g proteinu, 
+                            za rok byste si s ${winner.name} oproti ${winner === product1 ? product2.name : product1.name} 
+                            ušetřili ${((savings * 30 * 365) / 1000).toFixed(1)} tisíc korun.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Recommendations -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4">🎯 Doporučení</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-4 border rounded-lg">
+                            <h3 class="font-semibold text-green-600 mb-2">💵 Pro šetření peněz</h3>
+                            <p class="text-gray-700">
+                                Vyberte si <strong>${winner.name}</strong> s cenou ${winner.pricePerGramProtein.toFixed(2)} Kč za gram proteinu. 
+                                Dlouhodobě ušetříte výrazné částky.
+                            </p>
+                        </div>
+                        <div class="p-4 border rounded-lg">
+                            <h3 class="font-semibold text-blue-600 mb-2">💪 Pro maximální protein</h3>
+                            <p class="text-gray-700">
+                                ${product1.proteinPer100g > product2.proteinPer100g ? product1.name : product2.name} 
+                                obsahuje více proteinu (${Math.max(product1.proteinPer100g, product2.proteinPer100g)}g/100g) 
+                                a je ideální pro sportovce.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Comparisons -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">🔗 Další porovnání</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        ${productsData
+                            .filter(p => p.id !== product1.id && p.id !== product2.id)
+                            .sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)
+                            .slice(0, 3)
+                            .map(product => `
+                                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                                    <h3 class="font-semibold text-primary mb-2">${product.name}</h3>
+                                    <div class="text-sm text-gray-600 space-y-1">
+                                        <div>Cena: ${product.pricePerGramProtein.toFixed(2)} Kč/g</div>
+                                        <div>Protein: ${product.proteinPer100g}g/100g</div>
+                                    </div>
+                                    <div class="mt-3 space-y-2">
+                                        <button onclick="showComparison('${product1.slug}', '${product.slug}')" class="w-full text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded hover:bg-blue-200">
+                                            vs ${product1.name}
+                                        </button>
+                                        <button onclick="showComparison('${product2.slug}', '${product.slug}')" class="w-full text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">
+                                            vs ${product2.name}
+                                        </button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Comparison selector when no products specified
+        function showComparisonSelector() {
+            updateSEO(
+                'Porovnání proteinových potravin - vyberte produkty k porovnání',
+                'Porovnejte dva produkty podle ceny za gram proteinu, nutričních hodnot a efektivity. Najděte nejlepší volbu pro vaši stravu.',
+                'porovnání proteinů, protein kalkulka, nejlevnější protein'
+            );
+            
+            updateBreadcrumbs([
+                {name: 'Domů', action: 'showHomepage()'},
+                {name: 'Porovnání', action: 'showComparisons()'}
+            ]);
+            
+            const topProducts = productsData.sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein).slice(0, 10);
+            
+            const content = `
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Porovnání proteinových potravin</h1>
+                    <p class="text-xl text-gray-600">
+                        Vyberte dva produkty pro detailní porovnání ceny za gram proteinu a nutričních hodnot.
+                    </p>
+                </div>
+                
+                <!-- Quick Comparisons -->
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4">⚡ Rychlá porovnání</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        ${[
+                            { title: 'Nejlevnější vs Nejdražší', 
+                              product1: productsData.sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0],
+                              product2: productsData.sort((a, b) => b.pricePerGramProtein - a.pricePerGramProtein)[0] },
+                            { title: 'Mléčné vs Maso',
+                              product1: productsData.filter(p => p.category === 'dairy').sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0],
+                              product2: productsData.filter(p => p.category === 'meat').sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0] },
+                            { title: 'Rostlinné vs Živčišné',
+                              product1: productsData.filter(p => p.category === 'legumes').sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0],
+                              product2: productsData.filter(p => p.category === 'dairy').sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)[0] }
+                        ].map(comp => `
+                            <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" 
+                                 onclick="showComparison('${comp.product1?.slug}', '${comp.product2?.slug}')">
+                                <h3 class="font-semibold text-primary mb-3">${comp.title}</h3>
+                                <div class="text-sm space-y-2">
+                                    <div class="flex justify-between">
+                                        <span>${comp.product1?.name.slice(0, 20)}...</span>
+                                        <span class="font-bold">${comp.product1?.pricePerGramProtein.toFixed(2)} Kč/g</span>
+                                    </div>
+                                    <div class="text-center text-gray-400">vs</div>
+                                    <div class="flex justify-between">
+                                        <span>${comp.product2?.name.slice(0, 20)}...</span>
+                                        <span class="font-bold">${comp.product2?.pricePerGramProtein.toFixed(2)} Kč/g</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <span class="text-xs bg-primary text-white px-2 py-1 rounded">🔍 Porovnat</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <!-- Product Selector -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">🎯 Vlastní výběr</h2>
+                    <p class="text-gray-600 mb-6">Klikněte na dva produkty pro jejich porovnání:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="productSelector">
+                        ${topProducts.map((product, index) => `
+                            <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer product-selector" 
+                                 data-slug="${product.slug}" onclick="selectProductForComparison('${product.slug}')">
+                                <div class="text-center mb-2">
+                                    <span class="text-xl">${index < 3 ? ['🏆', '🥈', '🥉'][index] : `#${index + 1}`}</span>
+                                </div>
+                                <h3 class="font-semibold text-primary mb-2">${product.name}</h3>
+                                <div class="text-sm text-gray-600 space-y-1">
+                                    <div>Cena: ${product.pricePerGramProtein.toFixed(2)} Kč/g</div>
+                                    <div>Protein: ${product.proteinPer100g}g/100g</div>
+                                    <div>Kategorie: ${categoryNames[product.category]}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <div id="selectionStatus" class="text-gray-500">
+                            Vyberte dva produkty pro porovnání
+                        </div>
+                        <button id="compareButton" class="mt-3 bg-primary text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors disabled:bg-gray-300" disabled>
+                            Porovnat vybrané produkty
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Product selection for comparison
+        let selectedProducts = [];
+        
+        function selectProductForComparison(slug) {
+            const element = document.querySelector(`[data-slug="${slug}"]`);
+            
+            if (selectedProducts.includes(slug)) {
+                // Deselect
+                selectedProducts = selectedProducts.filter(s => s !== slug);
+                element.classList.remove('ring-2', 'ring-primary', 'bg-primary/5');
+            } else if (selectedProducts.length < 2) {
+                // Select
+                selectedProducts.push(slug);
+                element.classList.add('ring-2', 'ring-primary', 'bg-primary/5');
+            } else {
+                // Replace oldest selection
+                const oldSlug = selectedProducts.shift();
+                const oldElement = document.querySelector(`[data-slug="${oldSlug}"]`);
+                oldElement.classList.remove('ring-2', 'ring-primary', 'bg-primary/5');
+                
+                selectedProducts.push(slug);
+                element.classList.add('ring-2', 'ring-primary', 'bg-primary/5');
+            }
+            
+            updateComparisonButton();
+        }
+        
+        function updateComparisonButton() {
+            const statusEl = document.getElementById('selectionStatus');
+            const buttonEl = document.getElementById('compareButton');
+            
+            if (selectedProducts.length === 0) {
+                statusEl.textContent = 'Vyberte dva produkty pro porovnání';
+                buttonEl.disabled = true;
+            } else if (selectedProducts.length === 1) {
+                const product = productsData.find(p => p.slug === selectedProducts[0]);
+                statusEl.textContent = `Vybráno: ${product.name}. Vyberte ještě jeden produkt.`;
+                buttonEl.disabled = true;
+            } else {
+                const product1 = productsData.find(p => p.slug === selectedProducts[0]);
+                const product2 = productsData.find(p => p.slug === selectedProducts[1]);
+                statusEl.textContent = `Vybráno: ${product1.name} vs ${product2.name}`;
+                buttonEl.disabled = false;
+                buttonEl.onclick = () => showComparison(selectedProducts[0], selectedProducts[1]);
+            }
+        }
+        
+        // Navigation helper
+        function navigateTo(path) {
+            const fullPath = `/protein-hunter${path}`;
+            history.pushState({page: path}, '', fullPath);
+            handleRouting();
+        }
+        
+        // Override link clicks to use navigateTo
+        function showHomepage() {
+            updateSEO(
+                'Protein Hunter - Najděte nejlepší poměr proteinu a ceny',
+                'Porovnání 45+ potravin podle ceny za gram proteinu. Recepty, kalkulačka a slovník proteinů pro fitness a zdraví.',
+                'protein, bílkoviny, cena proteinu, nejlevnější protein, fitness recepty, proteinové potraviny'
+            );
+            
+            updateBreadcrumbs([{name: 'Domů', action: 'navigateTo("/")'}]);
+            
+            // ... rest of homepage content remains the same
+            const content = `
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">🥩 Protein Hunter</h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Najděte nejlepší poměr proteinu a ceny z 45+ potravin. 
+                        Porovnejte ceny, objevte recepty a vypočítejte svou potřebu bílkovin.
+                    </p>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">${productsData.length}</div>
+                        <div class="text-gray-600">Produktů v databázi</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">4</div>
+                        <div class="text-gray-600">Receptů s vysokým proteinem</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">${Math.min(...productsData.map(p => p.pricePerGramProtein)).toFixed(2)}</div>
+                        <div class="text-gray-600">Nejlepší cena Kč/g</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-primary">20+</div>
+                        <div class="text-gray-600">Pojmů ve slovníku</div>
+                    </div>
+                </div>
+                
+                <!-- Updated links with proper navigation -->
+                <div class="bg-white rounded-lg shadow mb-8">
+                    <div class="px-6 py-4 border-b">
+                        <h2 class="text-2xl font-semibold">🏆 TOP 5 nejlevnějších proteinů</h2>
+                    </div>
+                    <div class="p-6">
+                        ${productsData
+                            .sort((a, b) => a.pricePerGramProtein - b.pricePerGramProtein)
+                            .slice(0, 5)
+                            .map((product, index) => `
+                                <div class="flex items-center justify-between py-3 border-b last:border-b-0 hover:bg-gray-50 cursor-pointer" onclick="navigateTo('/produkty/${product.slug}')">
+                                    <div class="flex items-center gap-4">
+                                        <span class="text-2xl">${['🏆', '🥈', '🥉', '4️⃣', '5️⃣'][index]}</span>
+                                        <div>
+                                            <h3 class="font-semibold text-primary hover:underline">${product.name}</h3>
+                                            <div class="text-sm text-gray-600">${categoryNames[product.category]} • ${product.totalProtein}g proteinu</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-xl font-bold text-primary">${product.pricePerGramProtein.toFixed(2)} Kč</div>
+                                        <div class="text-xs text-gray-500">za 1g proteinu</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                </div>
+                
+                <!-- Quick Actions with proper links -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-3">📊 Produkty podle kategorií</h3>
+                        <div class="space-y-2">
+                            ${Object.entries(categoryNames).map(([key, name]) => `
+                                <a href="/protein-hunter/kategorie/${key}" onclick="navigateTo('/kategorie/${key}'); return false;" class="block text-primary hover:underline">${name}</a>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-3">🍽️ Recepty s vysokým proteinem</h3>
+                        <div class="space-y-2">
+                            <a href="/protein-hunter/recepty/breakfast" onclick="navigateTo('/recepty/breakfast'); return false;" class="block text-primary hover:underline">Proteinové snídaně</a>
+                            <a href="/protein-hunter/recepty/lunch" onclick="navigateTo('/recepty/lunch'); return false;" class="block text-primary hover:underline">Fitness obědy</a>
+                            <a href="/protein-hunter/recepty/dinner" onclick="navigateTo('/recepty/dinner'); return false;" class="block text-primary hover:underline">Zdravé večeře</a>
+                            <a href="/protein-hunter/recepty" onclick="navigateTo('/recepty'); return false;" class="block text-primary hover:underline">Všechny recepty →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-3">🔧 Nástroje</h3>
+                        <div class="space-y-2">
+                            <a href="/protein-hunter/kalkulacka" onclick="navigateTo('/kalkulacka'); return false;" class="block text-primary hover:underline">Protein kalkulačka</a>
+                            <a href="/protein-hunter/slovnik" onclick="navigateTo('/slovnik'); return false;" class="block text-primary hover:underline">Slovník pojmů</a>
+                            <a href="/protein-hunter/porovnani" onclick="navigateTo('/porovnani'); return false;" class="block text-primary hover:underline">Porovnání produktů</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('mainContent').innerHTML = content;
+        }
+        
+        // Initialize app with routing
+        document.addEventListener('DOMContentLoaded', function() {
+            handleRouting();
+        });
+        
+        // Handle browser back/forward
+        window.addEventListener('popstate', function(event) {
+            handleRouting();
+        });
+    </script>
+</body>
+</html>

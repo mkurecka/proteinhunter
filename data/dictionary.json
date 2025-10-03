@@ -1,0 +1,225 @@
+{
+  "terms": [
+    {
+      "id": "protein",
+      "term": "Protein",
+      "slug": "protein",
+      "definition": "Protein neboli bílkovina je makronutrient složený z aminokyselin, který je nezbytný pro stavbu a obnovu tkání, tvorbu enzymů a hormonů.",
+      "longDescription": "Proteiny jsou jedním ze tří základních makronutrientů (spolu s tuky a sacharidy). Skládají se z aminokyselin, z nichž 9 je esenciálních - tělo si je nedokáže vyrobit a musí je získat z potravy. Doporučený denní příjem proteinu je 0,8-1,2g na kg tělesné hmotnosti pro běžnou populaci, pro sportovce 1,6-2,2g/kg.",
+      "synonyms": ["bílkovina", "bílkoviny"],
+      "category": "nutrition",
+      "relatedTerms": ["aminokyseliny", "makronutrient", "esencialni-aminokyseliny"],
+      "searchVolume": 8100,
+      "examples": ["kuřecí prsa", "vejce", "tvaroh", "luštěniny"]
+    },
+    {
+      "id": "aminokyseliny",
+      "term": "Aminokyseliny",
+      "slug": "aminokyseliny", 
+      "definition": "Základní stavební jednotky proteinů. Existuje 20 aminokyselin, z nichž 9 je esenciálních.",
+      "longDescription": "Aminokyseliny jsou organické sloučeniny obsahující aminoskupinu a karboxylovou skupinu. Lidské tělo potřebuje 20 různých aminokyselin. 11 si dokáže vyrobit samo (neesenciální), 9 musí získat z potravy (esenciální). Esenciální aminokyseliny jsou: histidin, isoleucin, leucin, lysin, methionin, fenylalanin, threonin, tryptofan a valin.",
+      "synonyms": ["aminoacids"],
+      "category": "nutrition",
+      "relatedTerms": ["protein", "esencialni-aminokyseliny", "bcaa"],
+      "searchVolume": 2900
+    },
+    {
+      "id": "bcaa",
+      "term": "BCAA",
+      "slug": "bcaa",
+      "definition": "Branched-Chain Amino Acids - větvené aminokyseliny (leucin, isoleucin, valin) důležité pro regeneraci svalů.",
+      "longDescription": "BCAA tvoří asi 35% všech aminokyselin ve svalové tkáni. Jsou jediné aminokyseliny, které se metabolizují přímo ve svalech, ne v játrech. Leucin je nejvýznamnější pro stimulaci syntézy svalových proteinů. BCAA se často užívají jako doplněk stravy před, během nebo po tréninku.",
+      "synonyms": ["větvené aminokyseliny", "branched chain amino acids"],
+      "category": "supplements",
+      "relatedTerms": ["leucin", "isoleucin", "valin", "regenerace"],
+      "searchVolume": 6600
+    },
+    {
+      "id": "whey-protein",
+      "term": "Whey protein",
+      "slug": "whey-protein",
+      "definition": "Syrovátkový protein získaný z mléka, rychle se vstřebává a obsahuje všechny esenciální aminokyseliny.",
+      "longDescription": "Whey protein je nejpopulárnější proteinový doplněk. Vzniká jako vedlejší produkt při výrobě sýra. Obsahuje vysoké množství BCAA a rychle se vstřebává (30-60 minut). Existují tři hlavní typy: koncentrát (70-80% protein), izolát (90%+ protein) a hydrolyzát (předtrávený).",
+      "synonyms": ["syrovátkový protein"],
+      "category": "supplements", 
+      "relatedTerms": ["protein", "isolat", "koncentrat", "regenerace"],
+      "searchVolume": 14800
+    },
+    {
+      "id": "kazein",
+      "term": "Kasein",
+      "slug": "kazein",
+      "definition": "Pomalu se vstřebávající mléčný protein, ideální na noc nebo mezi jídly.",
+      "longDescription": "Kasein tvoří asi 80% mléčných proteinů. Na rozdíl od whey proteinu se vstřebává pomalu (6-8 hodin), což zajišťuje postupné uvolňování aminokyselin. Proto je ideální před spánkem nebo jako náhrada jídla. Obsahuje glutamin a je bohatý na vápník.",
+      "synonyms": ["casein"],
+      "category": "supplements",
+      "relatedTerms": ["protein", "whey-protein", "nocni-protein"],
+      "searchVolume": 4400
+    },
+    {
+      "id": "kompletni-protein",
+      "term": "Kompletní protein",
+      "slug": "kompletni-protein",
+      "definition": "Protein obsahující všech 9 esenciálních aminokyselin v dostatečném množství.",
+      "longDescription": "Kompletní proteiny obsahují všechny esenciální aminokyseliny v optimálním poměru pro lidské tělo. Většina živočišných proteinů (maso, ryby, vejce, mléčné výrobky) jsou kompletní. Z rostlinných jsou kompletní quinoa, pohanka, chia semínka a sója.",
+      "synonyms": ["úplný protein", "plnohodnotný protein"],
+      "category": "nutrition",
+      "relatedTerms": ["esencialni-aminokyseliny", "zivocisne-proteiny"],
+      "searchVolume": 1600
+    },
+    {
+      "id": "nekompletni-protein", 
+      "term": "Nekompletní protein",
+      "slug": "nekompletni-protein",
+      "definition": "Protein, kterému chybí jedna nebo více esenciálních aminokyselin.",
+      "longDescription": "Většina rostlinných proteinů je nekompletních. Například luštěniny mají málo methioninu, obilniny málo lysinu. Kombinováním různých rostlinných zdrojů (rýže + fazole) lze získat kompletní aminokyselinový profil.",
+      "synonyms": ["neúplný protein"],
+      "category": "nutrition", 
+      "relatedTerms": ["rostlinne-proteiny", "kombinovani-proteinu"],
+      "searchVolume": 880
+    },
+    {
+      "id": "biologicka-hodnota",
+      "term": "Biologická hodnota",
+      "slug": "biologicka-hodnota",
+      "definition": "Míra kvality proteinu určující, jak efektivně tělo dokáže protein využít.",
+      "longDescription": "Biologická hodnota (BV) udává procento absorbovaného proteinu, které tělo skutečně využije. Vejce má BV 100 (referenční standard), whey protein 104-110, hovězí maso 80, pšenice 54. Čím vyšší BV, tím kvalitnější protein.",
+      "synonyms": ["BV", "protein quality"],
+      "category": "nutrition",
+      "relatedTerms": ["kvalita-proteinu", "utilizace-proteinu"],
+      "searchVolume": 720
+    },
+    {
+      "id": "pdcaas",
+      "term": "PDCAAS",
+      "slug": "pdcaas", 
+      "definition": "Protein Digestibility Corrected Amino Acid Score - metoda hodnocení kvality proteinu.",
+      "longDescription": "PDCAAS je oficiální metoda FAO/WHO pro hodnocení kvality proteinu. Zohledňuje aminokyselinový profil a stravitelnost. Škála 0-1, kde 1 je nejvyšší kvalita. Kazein, whey a vejce mají skóre 1,0.",
+      "synonyms": ["Protein Digestibility Corrected Amino Acid Score"],
+      "category": "nutrition",
+      "relatedTerms": ["kvalita-proteinu", "stravitelnost"],
+      "searchVolume": 390
+    },
+    {
+      "id": "denni-davka-proteinu",
+      "term": "Denní dávka proteinu", 
+      "slug": "denni-davka-proteinu",
+      "definition": "Doporučené množství proteinu, které by člověk měl denně konzumovat.",
+      "longDescription": "RDA (Recommended Dietary Allowance) pro protein je 0,8g/kg tělesnej hmotnosti pro dospělé. Pro sportovce 1,6-2,2g/kg, pro starší osoby 1,2g/kg. Při hubnutí se doporučuje 1,6-2,4g/kg pro zachování svalové hmoty.",
+      "synonyms": ["RDA protein", "doporučená dávka"],
+      "category": "nutrition",
+      "relatedTerms": ["protein", "sportovci", "hubnuti"],
+      "searchVolume": 2400
+    },
+    {
+      "id": "synteza-proteinu",
+      "term": "Syntéza proteinu",
+      "slug": "synteza-proteinu", 
+      "definition": "Biologický proces tvorby nových proteinů v těle, klíčový pro růst a obnovu tkání.",
+      "longDescription": "Proteinová syntéza probíhá v ribozomech podle instrukcí z DNA. U svalů je stimulována tréninkem, příjmem proteinů (zejména leucinem) a inzulínem. Maximální stimulace vyžaduje 20-25g kvalitního proteinu.",
+      "synonyms": ["protein synthesis", "tvorba proteinů"],
+      "category": "physiology",
+      "relatedTerms": ["leucin", "regenerace", "rust-svalu"],
+      "searchVolume": 1200
+    },
+    {
+      "id": "protein-timing",
+      "term": "Protein timing",
+      "slug": "protein-timing",
+      "definition": "Optimální načasování příjmu proteinu pro maximální efekt na výkon a regeneraci.",
+      "longDescription": "Anabolické okno po tréninku trvá 24-48 hodin, ne jen 30 minut. Důležitější než timing je celkový denní příjem. Rovnoměrné rozložení proteinu během dne (20-30g na jídlo) je efektivnější než velké dávky najednou.",
+      "synonyms": ["načasování proteinu", "anabolické okno"],
+      "category": "sports-nutrition",
+      "relatedTerms": ["anabolicke-okno", "regenerace", "po-treningu"],
+      "searchVolume": 880
+    },
+    {
+      "id": "termoregulace",
+      "term": "Termoregulace",
+      "slug": "termoregulace",
+      "definition": "Termický efekt proteinu - zvýšená produkce tepla po konzumaci bílkovin.",
+      "longDescription": "Protein má nejvyšší termický efekt ze všech makronutrientů (20-30% vs 5-15% sacharidy a tuky). To znamená, že tělo spálí více kalorií při trávení a metabolismu proteinů, což podporuje hubnutí.",
+      "synonyms": ["termický efekt", "TEF"],
+      "category": "metabolism",
+      "relatedTerms": ["metabolismus", "spalovani-kalori", "hubnuti"],
+      "searchVolume": 650
+    },
+    {
+      "id": "leucin",
+      "term": "Leucin", 
+      "slug": "leucin",
+      "definition": "Nejdůležitější esenciální aminokyselina pro stimulaci syntézy svalových proteinů.",
+      "longDescription": "Leucin je 'spouštěč' proteinové syntézy. Aktivuje mTOR dráhu, která reguluje růst svalů. Pro optimální stimulaci je potřeba 2,5-3g leucinu na jídlo. Bohatými zdroji jsou maso, vejce, mléčné výrobky a whey protein.",
+      "synonyms": ["L-leucin"],
+      "category": "nutrition",
+      "relatedTerms": ["bcaa", "mtor", "rust-svalu", "synteza-proteinu"],
+      "searchVolume": 3300
+    },
+    {
+      "id": "mtor",
+      "term": "mTOR",
+      "slug": "mtor",
+      "definition": "Mechanistic Target of Rapamycin - klíčová signální dráha pro růst svalů.",
+      "longDescription": "mTOR je protein kinase, která funguje jako 'hlavní spínač' pro anabolické procesy. Aktivuje se leucinem, inzulínem a mechanickým stresem (trénink). Je nezbytná pro syntézu svalových proteinů a růst svalové hmoty.",
+      "synonyms": ["mechanistic target of rapamycin"],
+      "category": "physiology", 
+      "relatedTerms": ["leucin", "anabolismus", "rust-svalu"],
+      "searchVolume": 1100
+    },
+    {
+      "id": "soja-protein",
+      "term": "Sojový protein",
+      "slug": "soja-protein",
+      "definition": "Rostlinný protein získaný ze sóji, jeden z mála kompletních rostlinných proteinů.",
+      "longDescription": "Sójový protein obsahuje všechny esenciální aminokyseliny. Má nižší biologickou hodnotu než živočišné proteiny, ale je vhodný pro vegetariány. Obsahuje fytoestrogy (isoflavony), které mohou mít zdravotní benefity.",
+      "synonyms": ["soy protein"],
+      "category": "plant-proteins",
+      "relatedTerms": ["rostlinne-proteiny", "vegetariani", "isoflavony"],
+      "searchVolume": 2200
+    },
+    {
+      "id": "hrachovy-protein", 
+      "term": "Hrachový protein",
+      "slug": "hrachovy-protein",
+      "definition": "Rostlinný protein ze žlutého hrachu, bohatý na BCAA a dobře stravitelný.",
+      "longDescription": "Hrachový protein je hypoalergenní alternativa k whey proteinu. Obsahuje vysoké množství argininů, lyzinu a větvených aminokyselin. Je snadno stravitelný a vhodný pro vegany. Chybí mu methionin, ale kombinací s rýží získáme kompletní profil.",
+      "synonyms": ["pea protein"],
+      "category": "plant-proteins",
+      "relatedTerms": ["rostlinne-proteiny", "hypoalergerni", "vegani"],
+      "searchVolume": 1800
+    },
+    {
+      "id": "konopny-protein",
+      "term": "Konopný protein", 
+      "slug": "konopny-protein",
+      "definition": "Rostlinný protein z konopných semínek, obsahuje všechny esenciální aminokyseliny.",
+      "longDescription": "Konopný protein obsahuje optimální poměr omega-3 a omega-6 mastných kyselin. Je bohatý na vlákninu, hořčík a železo. Má zemitou chuť a je snadno stravitelný. Obsahuje edestin a albumin - vysoce kvalitní proteiny.",
+      "synonyms": ["hemp protein"],
+      "category": "plant-proteins", 
+      "relatedTerms": ["rostlinne-proteiny", "omega-3", "vlaknina"],
+      "searchVolume": 1300
+    },
+    {
+      "id": "ryzovy-protein",
+      "term": "Rýžový protein",
+      "slug": "ryzovy-protein", 
+      "definition": "Hypoalergenní rostlinný protein získaný z rýže, vhodný pro citlivé žaludky.",
+      "longDescription": "Rýžový protein je snadno stravitelný a hypoalergenní. Je nízký v lyzinu, ale vysoký v methioninu (opak hrachového proteinu). Kombinace rýžového a hrachového proteinu vytváří kompletní aminokyselinový profil.",
+      "synonyms": ["rice protein"],
+      "category": "plant-proteins",
+      "relatedTerms": ["hypoalergerni", "stravitelnost", "kombinovani-proteinu"], 
+      "searchVolume": 990
+    },
+    {
+      "id": "kolostrum",
+      "term": "Kolostrum",
+      "slug": "kolostrum",
+      "definition": "První mléko savců po porodu, bohaté na protilátky a růstové faktory.",
+      "longDescription": "Bovine kolostrum obsahuje imunoglobuliny, laktoferin, růstové faktory a proteiny. Podporuje imunitní systém a regeneraci střevní sliznice. Používá se jako doplněk stravy pro sport a zdraví.",
+      "synonyms": ["colostrum", "první mléko"],
+      "category": "supplements",
+      "relatedTerms": ["imunita", "regenerace", "protilátky"],
+      "searchVolume": 2700
+    }
+  ]
+}
