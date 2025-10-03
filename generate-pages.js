@@ -1850,6 +1850,19 @@ const blogArticles = [
         tags: ["rostlinné", "živočišné", "věda", "srovnání", "biologie"],
         readTime: "8 min",
         featured: false
+    },
+    {
+        id: 4,
+        title: "Lean Proteiny: Průvodce pro úspěšné hubnutí 2025",
+        slug: "lean-protein-guide-2025",
+        excerpt: "Objevte tajemství lean proteinů a naučte se vybírat potraviny s vysokým protein/kcal ratio. Ideální pro cutting, definici a hubnutí při udržení svalové hmoty.",
+        content: "Článek bude vygenerován dynamicky...",
+        author: "Protein Hunter tým",
+        publishDate: "2025-01-15",
+        category: "guide",
+        tags: ["lean protein", "cutting", "hubnutí", "definice", "protein/kcal", "makra"],
+        readTime: "12 min",
+        featured: true
     }
 ];
 
