@@ -1,6 +1,13 @@
 # 🥩 Protein Hunter
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Pages](https://img.shields.io/badge/SEO%20Pages-238-brightgreen)](https://github.com/mkurecka/proteinhunter)
+[![Products](https://img.shields.io/badge/Products-123-blue)](https://github.com/mkurecka/proteinhunter)
+[![Made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-43853d)](https://nodejs.org/)
+
 Programmatic SEO website pro porovnání proteinových potravin podle ceny a nutriční hodnoty.
+
+**🌐 Live Demo:** http://46.62.166.240/protein-hunter/
 
 ## 📊 Statistiky
 
